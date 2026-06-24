@@ -20,11 +20,12 @@ from varu import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.heropage, name='heropage'),
+    path('', views.homepage, name='home'),
     path('mission/', views.mission, name='mission'),
-    path('who-we-are/', views.who_we_are, name='who_we_are'),
-    path('why-we-started/', views.why_we_started, name='why_we_started'),
-    path('health/', views.health_deficiency, name='health_deficiency'),
+    path('transportation/', views.transportation, name='transportation'),
+    path('education/', views.education, name='education'),
+    path('health/', views.health, name='health'),
     path('donate/', views.donate, name='donate'),
     path('contact/', views.contactus, name='contactus'),
+     path('team/', views.team, name='team')
 ]

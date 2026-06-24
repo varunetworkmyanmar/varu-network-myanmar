@@ -13,7 +13,7 @@
 <body>
 <header class="navbar">
     <div class="nav-container">
-        <a href="#" class="logo"><i class="fas fa-hand-holding-heart"></i> Caritas Myanmar</a>
+        <a href="#" class="logo"><i class="fas fa-hand-holding-heart"></i> Varu Network Myanmar</a>
         
         <button class="menu-toggle" id="mobileToggle" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
         
@@ -21,50 +21,34 @@
             <li class="nav-item" id="whoDropdown">
                 <a href="#" class="nav-link">Who We Are <i class="fas fa-chevron-down"></i></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#our-mission">Our Mission</a></li>
-                    <li><a href="#the-team">The Team Behind It</a></li>
+                    <li><a href="{% url 'mission' %}">Our Mission</a></li>
+                    <li><a href="{% url 'team' %}">The Team Behind It</a></li>
                 </ul>
             </li>
             <li class="nav-item" id="priorityDropdown">
                 <a href="#" class="nav-link">Why We Started <i class="fas fa-chevron-down"></i></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#healthcare">Healthcare Deficiency</a></li>
-                    <li><a href="#transport">Transportation Problem</a></li>
-                    <li><a href="#education">Education Inefficiencies</a></li>
+                    <li><a href="{% url 'health' %}">Healthcare Deficiency</a></li>
+                    <li><a href="{% url 'education' %}">Education Inefficiencies</a></li>
+                    <li><a href="{% url 'transportation' %}">Transportation Problem</a></li>
                 </ul>
             </li>
-            <li class="nav-item"><a href="#donateNow" class="nav-link donate-nav"><i class="fas fa-dove"></i> Donate</a></li>
+            <li class="nav-item">
+                <a href="{% url 'contactus' %}" class="nav-link">Contact us</a>
+            </li>
+            <li class="nav-item"><a href="{% url 'donate' %}" class="nav-link donate-nav"><i class="fas fa-dove"></i> Donate</a></li>
         </ul>
     </div>
 </header>
 
+<!-- Backdrop overlay -->
+<div class="nav-backdrop" id="navBackdrop"></div>
+
 <main class="page-content">
     {% block content %}
-
     {% endblock %}
 </main>
 
-<footer class="footer">
-    <div class="container">
-        <div class="footer-inner">
-            <div class="footer-brand">
-                <h4><i class="fas fa-dove"></i> Varu Network Myanmar</h4>
-                <p><i class="fas fa-location-dot"></i> No. 44, Kabar Aye Pagoda Road, Yangon</p>
-                <p><i class="fas fa-phone-alt"></i> +95 1 234 5678</p>
-                <p><i class="far fa-envelope"></i> info@caritasmyanmar.org</p>
-            </div>
-            <div class="social-links">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-        </div>
-        <div class="copyright">
-            © 2026 Caritas Myanmar — Hope & Dignity for All Communities.
-        </div>
-    </div>
-</footer>
 <script src="{% static 'varu/js/base.js' %}"></script>
 {% block extra_js %} {% endblock %}
 </body>

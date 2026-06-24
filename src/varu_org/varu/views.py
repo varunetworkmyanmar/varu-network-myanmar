@@ -1,36 +1,32 @@
 from django.shortcuts import render
 
 
-def heropage(request):
-    """Render the Varu hero page."""
+def homepage(request):
     return render(request, 'varu/home.html')
 
 
 def mission(request):
-    """Render the Mission page."""
-    return render(request, 'varu/mission.html', {'page_title': 'Our Mission'})
+    return render(request, 'varu/mission.html')
 
 
-def who_we_are(request):
-    """Render the Who We Are page."""
-    return render(request, 'varu/who we are.html', {'page_title': 'Who We Are'})
+def education(request):
+    return render(request, 'varu/education.html')
 
 
-def why_we_started(request):
-    """Render the Why We Started page."""
-    return render(request, 'varu/why we started.html', {'page_title': 'Why We Started'})
+def health(request):
+    return render(request, 'varu/health.html')
 
 
-def health_deficiency(request):
-    """Render the Health Deficiency page."""
-    return render(request, 'varu/health defficiency.html', {'page_title': 'Health Deficiency'})
+def transportation(request):
+    return render(request, 'varu/transportation.html')
 
 
 def donate(request):
-    """Render the Donate page."""
-    return render(request, 'varu/donate.html', {'page_title': 'Donate'})
+    return render(request, 'varu/donate.html')
 
 
 def contactus(request):
-    """Render the Contact Us page."""
-    return render(request, 'varu/contactus.html', {'page_title': 'Contact Us'})
+    return render(request, 'varu/contactus.html')
+
+def team(request):
+    return render(request, 'varu/team.html')
