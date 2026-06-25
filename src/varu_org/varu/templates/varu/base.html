@@ -13,11 +13,26 @@
 <body>
 <header class="navbar">
     <div class="nav-container">
-        <a href="#" class="logo"><i class="fas fa-hand-holding-heart"></i> Varu Network Myanmar</a>
+           <a href="#" class="logo">
+    <div class="logo-icon">
+        <i class="fas fa-hand-holding-heart"></i>
+    </div>
+    <div class="logo-text">
+        <span class="logo-main">Varu Network</span>
+        {% comment %} <span class="logo-divider"></span> {% endcomment %}
+        <span class="logo-sub">Myanmar</span>
+    </div>
+</a>
+
         
-        <button class="menu-toggle" id="mobileToggle" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+        <button class="menu-toggle" id="mobileToggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
         
         <ul class="nav-links" id="navLinks">
+            <li class="nav-item">
+                <a href="{% url 'home' %}" class="nav-link">Home</a>
+            </li>
             <li class="nav-item" id="whoDropdown">
                 <a href="#" class="nav-link">Who We Are <i class="fas fa-chevron-down"></i></a>
                 <ul class="dropdown-menu">
@@ -28,15 +43,18 @@
             <li class="nav-item" id="priorityDropdown">
                 <a href="#" class="nav-link">Why We Started <i class="fas fa-chevron-down"></i></a>
                 <ul class="dropdown-menu">
-                    <li><a href="{% url 'health' %}">Healthcare Deficiency</a></li>
                     <li><a href="{% url 'education' %}">Education Inefficiencies</a></li>
-                    <li><a href="{% url 'transportation' %}">Transportation Problem</a></li>
+                    <li><a href="{% url 'health' %}">Healthcare Deficiency</a></li>
                 </ul>
             </li>
             <li class="nav-item">
                 <a href="{% url 'contactus' %}" class="nav-link">Contact us</a>
             </li>
-            <li class="nav-item"><a href="{% url 'donate' %}" class="nav-link donate-nav"><i class="fas fa-dove"></i> Donate</a></li>
+            <li class="nav-item">
+                <a href="{% url 'donate' %}" class="nav-link donate-nav">
+                    <i class="fas fa-dove"></i> Donate
+                </a>
+            </li>
         </ul>
     </div>
 </header>
@@ -48,6 +66,69 @@
     {% block content %}
     {% endblock %}
 </main>
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Column 1: Logo & CTA -->
+        <div class="footer-col footer-col-brand">
+            <p class="footer-desc">Empowering communities through sustainable development and social justice across Myanmar.</p>
+            <a href="{% url 'donate' %}" class="footer-cta">
+                <i class="fas fa-dove"></i> Support Our Mission
+            </a>
+        </div>
+        <!-- Column 2: Get In Touch (Moved to left) -->
+        <div class="footer-col">
+            <h4 class="footer-heading">Get In Touch</h4>
+            <ul class="footer-contact">
+                <li>
+                    <i class="fas fa-phone"></i>
+                    <span>+95 9 123 456 789</span>
+                </li>
+                <li>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:info@varunetwork.org">info@varunetwork.org</a>
+                </li>
+                <li>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Yangon, Myanmar</span>
+                </li>
+            </ul>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- Column 3: Quick Menu -->
+        <div class="footer-col">
+            <h4 class="footer-heading">Quick Menu</h4>
+            <ul class="footer-links">
+                <li><a href="#">Who We Are</a></li>
+                <li><a href="#">Why We Started</a></li>
+                <li><a href="#">Our Approach</a></li>
+                <li><a href="#">Impact Stories</a></li>
+                <li><a href="{% url 'contactus' %}">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 4: Recent Posts -->
+      
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+        <div class="footer-bottom-content">
+            <p>&copy; 2026 Varu Network Myanmar | All Rights Reserved</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <script src="{% static 'varu/js/base.js' %}"></script>
 {% block extra_js %} {% endblock %}

@@ -1,11 +1,99 @@
 {% extends 'varu/base.html' %}
 {% load static %}
-{% block extra_css%}
-<link rel="stylesheet" href="{% static 'varu/css/home.css' %}">
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'varu/css/donate.css' %}">
 {% endblock %}
+
 {% block content %}
- <div class="container">
-    <h1>Donate us</h1>
-    <p>Help us make a difference. Your donation matters.</p>
-  </div>
+<!-- ===== HERO ===== -->
+<section class="donate-hero">
+    <div class="container">
+        <div class="donate-hero-content">
+            <span class="donate-tag">Support Us</span>
+            <h1>Let's Build Something<br>Together</h1>
+            <p>We're a new organization with a big mission. Your support — whether through advice, connections, or donations — helps us grow.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== SIMPLE MESSAGE ===== -->
+<section class="donate-message">
+    <div class="container">
+        <div class="message-box">
+            <div class="message-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h2>We're Just Getting Started</h2>
+            <p>Varu Network Myanmar is new, and we're working hard to set up our operations. We don't have a bank account yet, but we're committed to full transparency from day one.</p>
+            <p>If you'd like to support us, please reach out directly — we'd love to connect with you.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTACT TEAM ===== -->
+<section class="donate-team">
+    <div class="container">
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="team-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h3>Team Lead</h3>
+                <p class="team-role">Varu Network Myanmar</p>
+                <a href="mailto:team@varunetwork.org" class="team-link">
+                    <i class="fas fa-envelope"></i> team@varunetwork.org
+                </a>
+                <a href="tel:+959123456789" class="team-link">
+                    <i class="fas fa-phone"></i> +95 9 123 456 789
+                </a>
+            </div>
+            <div class="team-card">
+                <div class="team-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h3>Treasurer</h3>
+                <p class="team-role">Varu Network Myanmar</p>
+                <a href="mailto:treasurer@varunetwork.org" class="team-link">
+                    <i class="fas fa-envelope"></i> treasurer@varunetwork.org
+                </a>
+                <a href="tel:+959987654321" class="team-link">
+                    <i class="fas fa-phone"></i> +95 9 987 654 321
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== TRANSPARENCY ===== -->
+<section class="donate-transparency">
+    <div class="container">
+        <div class="transparency-box">
+            <span class="donate-tag">Our Promise</span>
+            <h2>Transparency & Trust</h2>
+            <p>We believe in being open and honest with everyone who supports us. Here's what we promise:</p>
+            <div class="promise-list">
+                <div class="promise-item">
+                    <i class="fas fa-check"></i>
+                    <span>Full transparency on all donations</span>
+                </div>
+                <div class="promise-item">
+                    <i class="fas fa-check"></i>
+                    <span>Regular updates on our progress</span>
+                </div>
+                <div class="promise-item">
+                    <i class="fas fa-check"></i>
+                    <span>Clear communication with supporters</span>
+                </div>
+                <div class="promise-item">
+                    <i class="fas fa-check"></i>
+                    <span>Accountability in everything we do</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'varu/js/donate.js' %}"></script>
 {% endblock %}

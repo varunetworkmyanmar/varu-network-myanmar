@@ -4,5 +4,111 @@
 <link rel="stylesheet" href="{% static 'varu/css/home.css' %}">
 {% endblock %}
 {% block content %}
+<h2 class="sr-only">Full-width hero carousel with chevron arrow navigation, auto-advances every 3 seconds</h2>
 
+<div class="hero-carousel" id="heroCarousel">
+  <div class="hero-track" id="heroTrack">
+
+    <div class="hero-slide s1">
+      <div class="slide-content">
+        <div class="icon-wrap"><i class="ti ti-photo" aria-hidden="true"></i></div>
+        <h2>Your Image 1</h2>
+        <p>Replace with your &lt;img&gt; tag — fills the full screen width</p>
+      </div>
+    </div>
+
+    <div class="hero-slide s2">
+      <div class="slide-content">
+        <div class="icon-wrap"><i class="ti ti-camera" aria-hidden="true"></i></div>
+        <h2>Your Image 2</h2>
+        <p>Scales perfectly from widescreen laptop to mobile</p>
+      </div>
+    </div>
+
+    <div class="hero-slide s3">
+      <div class="slide-content">
+        <div class="icon-wrap"><i class="ti ti-layout-grid" aria-hidden="true"></i></div>
+        <h2>Your Image 3</h2>
+        <p>Auto-advances every 3 seconds — arrows and dots still work</p>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Left Chevron -->
+  <button class="hero-btn prev" aria-label="Previous slide">
+    <svg viewBox="0 0 40 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polyline points="32,4 8,32 32,60" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <!-- Right Chevron -->
+  <button class="hero-btn next" aria-label="Next slide">
+    <svg viewBox="0 0 40 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polyline points="8,4 32,32 8,60" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <div class="hero-dots" id="heroDots" role="tablist" aria-label="Slide navigation"></div>
+  <div class="hero-progress" id="heroProgress"></div>
+</div>
+
+<nav class="pagination-nav" aria-label="Carousel page navigation">
+ 
+</nav>
+
+<!-- ===== ABOUT SECTION ===== -->
+<section class="about-section">
+    <div class="container">
+        <div class="about-grid">
+            <!-- Left: Content -->
+            <div class="about-content">
+                <span class="about-tag">Who We Are</span>
+                <h2 class="about-title">Empowering Communities,<br>Transforming Lives</h2>
+                <p class="about-desc">
+                    Varu Network Myanmar is a non-profit organization dedicated to empowering 
+                    communities through sustainable development and social justice. We believe 
+                    in creating lasting change by addressing the root causes of poverty, 
+                    inequality, and injustice across Myanmar.
+                </p>
+                <p class="about-desc">
+                    Our work focuses on three critical areas: <strong>Healthcare</strong>, 
+                    <strong>Education</strong>, and <strong>Transportation</strong> — 
+                    the pillars that form the foundation of thriving communities.
+                </p>
+                
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Children in our community with disrupted education</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">80%</span>
+                        <span class="stat-label">Community deaths from transport barriers</span>
+                    </div>
+                </div>
+                
+                <a href="{% url 'mission' %}" class="about-btn">
+                    Learn More About Us <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <!-- Right: Image / Visual -->
+            <div class="about-image">
+                <div class="about-image-placeholder">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <span>Our Impact in Action</span>
+                </div>
+                <div class="about-image-overlay">
+          
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'varu/js/home.js' %}"></script>
 {% endblock %}

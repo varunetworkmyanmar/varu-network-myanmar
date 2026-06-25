@@ -1,11 +1,178 @@
 {% extends 'varu/base.html' %}
 {% load static %}
-{% block extra_css%}
-<link rel="stylesheet" href="{% static 'varu/css/home.css' %}">
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'varu/css/health.css' %}">
 {% endblock %}
+
 {% block content %}
- <div class="container">
-    <h1>Health Deficiency</h1>
-    <p>Help us make a difference. Your donation matters.</p>
-  </div>
+<!-- ===== HERO SECTION ===== -->
+<section class="health-hero">
+    <div class="container">
+        <div class="health-hero-content">
+            <span class="health-tag">Healthcare</span>
+            <h1>Your Support is Powerful.</h1>
+            <p>We Work Together</p>
+            <p class="health-hero-desc">Upstream seeks and builds relationships with individuals who are making a difference in their communities. By finding those who are already creating change, we are deepening impact instead of duplicating it.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== STATS SECTION ===== -->
+<section class="health-stats">
+    <div class="container">
+        <div class="health-stats-grid">
+            <div class="health-stat-item">
+                <span class="health-stat-number">2354+</span>
+                <span class="health-stat-label">Communities Served</span>
+            </div>
+            <div class="health-stat-item">
+                <span class="health-stat-number">3500+</span>
+                <span class="health-stat-label">Patients Treated</span>
+            </div>
+            <div class="health-stat-item">
+                <span class="health-stat-number">500+</span>
+                <span class="health-stat-label">Healthcare Workers</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ABOUT SECTION ===== -->
+<section class="health-about">
+    <div class="container">
+        <div class="health-about-grid">
+            <div class="health-about-image">
+                <div class="image-placeholder">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>Healthcare in Action</span>
+                </div>
+            </div>
+            <div class="health-about-content">
+                <span class="health-tag">Our Mission</span>
+                <h2>Bridging the Healthcare Gap</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris.</p>
+                <ul class="health-list">
+                    <li><i class="fas fa-check-circle"></i> Accessible healthcare for all communities</li>
+                    <li><i class="fas fa-check-circle"></i> Mobile health clinics reaching remote areas</li>
+                    <li><i class="fas fa-check-circle"></i> Training local healthcare workers</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== DETAIL SECTION ===== -->
+<section class="health-detail">
+    <div class="container">
+        <div class="health-detail-grid">
+            <div class="health-detail-content">
+                <span class="health-tag">Our Impact</span>
+                <h2>Healthcare for Everyone</h2>
+                <p>Vivamus eiusmod nec ullamcorper sit amet massa nullam eget felis et netus et malesuada fames urna nec tincidunt proin elementum feugiat mauris aliquam eleifend mi in nulla posuere sollicitudin pretium.</p>
+                <div class="health-detail-stats">
+                    <div class="detail-stat">
+                        <span>15+</span>
+                        <label>Mobile Clinics</label>
+                    </div>
+                    <div class="detail-stat">
+                        <span>50+</span>
+                        <label>Partner Organizations</label>
+                    </div>
+                </div>
+            </div>
+            <div class="health-detail-image">
+                <div class="image-placeholder">
+                    <i class="fas fa-stethoscope"></i>
+                    <span>Medical Services</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== GALLERY SECTION ===== -->
+<section class="health-gallery">
+    <div class="container">
+        <div class="health-gallery-header">
+            <span class="health-tag">Gallery</span>
+            <h2>Moments of Impact</h2>
+        </div>
+        <div class="health-gallery-grid">
+            <div class="gallery-item" onclick="openLightbox(0)">
+                <div class="image-placeholder">
+                    <i class="fas fa-image"></i>
+                    <span>Click to view</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(1)">
+                <div class="image-placeholder">
+                    <i class="fas fa-image"></i>
+                    <span>Click to view</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(2)">
+                <div class="image-placeholder">
+                    <i class="fas fa-image"></i>
+                    <span>Click to view</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(3)">
+                <div class="image-placeholder">
+                    <i class="fas fa-image"></i>
+                    <span>Click to view</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(4)">
+                <div class="image-placeholder">
+                    <i class="fas fa-image"></i>
+                    <span>Click to view</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(5)">
+                <div class="image-placeholder">
+                    <i class="fas fa-image"></i>
+                    <span>Click to view</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(6)">
+                <div class="image-placeholder">
+                    <i class="fas fa-image"></i>
+                    <span>Click to view</span>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(7)">
+                <div class="image-placeholder">
+                    <i class="fas fa-image"></i>
+                    <span>Click to view</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== LIGHTBOX ===== -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <button class="lightbox-close" onclick="closeLightbox()">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="lightbox-image" id="lightboxImage">
+            <i class="fas fa-image"></i>
+            <span>Image Preview</span>
+        </div>
+        <div class="lightbox-nav">
+            <button class="lightbox-nav-btn prev" onclick="prevImage()">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <span class="lightbox-counter" id="lightboxCounter">1 / 8</span>
+            <button class="lightbox-nav-btn next" onclick="nextImage()">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'varu/js/health.js' %}"></script>
 {% endblock %}

@@ -1,9 +1,204 @@
 {% extends 'varu/base.html' %}
-
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'varu/css/team.css' %}">
+{% endblock %}
 
 {% block content %}
-  <div class="container">
-    <h1>The team behind it</h1>
-    <p>Meet our team and learn about our values.</p>
-  </div>
+<!-- ===== HERO SECTION ===== -->
+<section class="team-hero">
+    <div class="container">
+        <div class="team-hero-content">
+            <span class="team-tag">Our Team</span>
+            <h1>Educators United<br>for Change</h1>
+            <p>We are a collective of educators, advocates, and community leaders working together to create lasting change. No hierarchy — just shared passion and purpose.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== TEAM GRID ===== -->
+<section class="team-grid-section">
+    <div class="container">
+        <div class="team-grid-header">
+            <h2>Meet the Collective</h2>
+            <p>Six individuals, one mission. Each brings unique skills and perspectives, but we're all united by our commitment to education and community empowerment.</p>
+        </div>
+        <div class="team-grid">
+            <!-- Member 1 -->
+            <div class="team-member">
+                <div class="member-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Photo</span>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h3>Aung Kyaw Moe</h3>
+                    <span class="member-role">Educator & Community Advocate</span>
+                    <p>Passionate about bringing education to remote communities. Aung believes every child deserves access to learning, regardless of where they live.</p>
+                    <div class="member-social">
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member 2 -->
+            <div class="team-member">
+                <div class="member-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Photo</span>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h3>Khin Su Myat</h3>
+                    <span class="member-role">Curriculum Developer & Trainer</span>
+                    <p>Khin designs learning programs that are accessible, inclusive, and culturally relevant. She trains local educators to deliver quality education.</p>
+                    <div class="member-social">
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member 3 -->
+            <div class="team-member">
+                <div class="member-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Photo</span>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h3>Min Zaw Oo</h3>
+                    <span class="member-role">Youth Mentor & Facilitator</span>
+                    <p>Min works directly with young people, creating safe spaces for learning and growth. He believes in the power of youth to transform their communities.</p>
+                    <div class="member-social">
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member 4 -->
+            <div class="team-member">
+                <div class="member-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Photo</span>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h3>Hnin Ei Phyu</h3>
+                    <span class="member-role">Community Health Educator</span>
+                    <p>Hnin integrates health education into community programs, ensuring families have access to vital health information alongside learning opportunities.</p>
+                    <div class="member-social">
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member 5 -->
+            <div class="team-member">
+                <div class="member-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Photo</span>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h3>Kyaw Myo Htun</h3>
+                    <span class="member-role">Resource Coordinator</span>
+                    <p>Kyaw ensures that learning materials, supplies, and resources reach the communities that need them most. He's the backbone of our logistical efforts.</p>
+                    <div class="member-social">
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member 6 -->
+            <div class="team-member">
+                <div class="member-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Photo</span>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h3>Su Wai Hnin</h3>
+                    <span class="member-role">Digital Learning Specialist</span>
+                    <p>Su brings technology into education, creating digital learning opportunities for children in areas with limited access to traditional schooling.</p>
+                    <div class="member-social">
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== GRATITUDE SECTION ===== -->
+<section class="team-gratitude">
+    <div class="container">
+        <div class="gratitude-content">
+            <span class="team-tag">Thank You</span>
+            <h2>Deep Gratitude to Every Member</h2>
+            <p>This work is possible because of the dedication, passion, and heart of every individual in our collective. We don't have leaders — we have learners, teachers, and changemakers all working together.</p>
+            <p class="gratitude-note">To our extended community of supporters, volunteers, and partners — your belief in our mission fuels everything we do. Thank you for walking with us.</p>
+            <div class="gratitude-icons">
+                <div class="gratitude-item">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <span>Thank You for Your Support</span>
+                </div>
+                <div class="gratitude-item">
+                    <i class="fas fa-users"></i>
+                    <span>Together We Are Stronger</span>
+                </div>
+                <div class="gratitude-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Every Child Deserves Education</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== COLLABORATION SECTION ===== -->
+<section class="team-collaboration">
+    <div class="container">
+        <div class="collaboration-content">
+            <div class="collaboration-text">
+                <span class="team-tag">Our Approach</span>
+                <h2>No Hierarchy,<br>Just Collaboration</h2>
+                <p>We believe that the best ideas come from everyone, not just a few. Our structure is flat — every voice matters, every contribution is valued.</p>
+                <ul class="collaboration-list">
+                    <li><i class="fas fa-check-circle"></i> Shared leadership and collective decision-making</li>
+                    <li><i class="fas fa-check-circle"></i> Everyone's expertise is respected and utilized</li>
+                    <li><i class="fas fa-check-circle"></i> We learn from each other every day</li>
+                    <li><i class="fas fa-check-circle"></i> Our strength is our unity and shared purpose</li>
+                </ul>
+            </div>
+            <div class="collaboration-image">
+                <div class="image-placeholder">
+                    <i class="fas fa-handshake"></i>
+                    <span>Collaboration in Action</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+{% comment %} <script src="{% static 'varu/js/team.js' %}"></script> {% endcomment %}
 {% endblock %}

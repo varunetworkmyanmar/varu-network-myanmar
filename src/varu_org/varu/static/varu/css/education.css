@@ -1,0 +1,975 @@
+/* ========================================
+   EDUCATION PAGE - COMPLETE CSS
+   ======================================== */
+
+/* ===== IMAGE CAROUSEL ===== */
+.education-carousel {
+    padding: 2rem 0 0;
+    background: var(--white);
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    margin: 0 auto;
+    max-width: 1400px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.carousel-slide {
+    min-width: 100%;
+    aspect-ratio: 21/9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gray-100);
+    position: relative;
+}
+
+.carousel-slide .image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    color: var(--gray-300);
+    background: var(--gray-50);
+    position: relative;
+}
+
+.carousel-slide .image-placeholder i {
+    font-size: 5rem;
+    opacity: 0.4;
+}
+
+.slide-text {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--charcoal);
+    opacity: 0.8;
+    text-align: center;
+    padding: 0 2rem;
+    letter-spacing: -0.02em;
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--charcoal);
+    font-size: 1.2rem;
+}
+
+.carousel-btn:hover {
+    transform: translateY(-50%) scale(1.1);
+    background: var(--white);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.carousel-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.carousel-btn.prev-btn {
+    left: 1.5rem;
+}
+
+.carousel-btn.next-btn {
+    right: 1.5rem;
+}
+
+/* Carousel Dots */
+.carousel-dots {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.8rem;
+    z-index: 10;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.carousel-dot.active {
+    background: var(--crimson);
+    width: 30px;
+    border-radius: 5px;
+}
+
+.carousel-dot:hover {
+    background: var(--crimson-light);
+    transform: scale(1.1);
+}
+
+/* Carousel Progress Bar */
+.carousel-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background: var(--crimson);
+    z-index: 11;
+    width: 0%;
+    transition: width 3s linear;
+    border-radius: 0 2px 2px 0;
+}
+
+/* Pause indicator */
+.carousel-paused {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.carousel-paused.visible {
+    opacity: 1;
+}
+
+/* ===== HERO SECTION ===== */
+.education-hero {
+    padding: 6rem 0 5rem;
+    background: var(--white);
+}
+
+.education-hero-content {
+    max-width: 700px;
+}
+
+.education-tag {
+    display: inline-block;
+    color: var(--crimson);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    padding: 0.3rem 1rem;
+    width: fit-content;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+    cursor: default;
+}
+
+.education-tag:hover {
+    transform: translateX(4px);
+}
+
+.education-hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--charcoal);
+    line-height: 1.15;
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.02em;
+    transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.education-hero-content h1:hover {
+    transform: translateX(6px);
+}
+
+.education-hero-content p {
+    font-size: 1.2rem;
+    color: var(--gray-600);
+    line-height: 1.8;
+    max-width: 600px;
+    font-weight: 400;
+    transition: transform 0.4s ease;
+}
+
+.education-hero-content p:hover {
+    transform: translateX(4px);
+}
+
+/* ===== STATS SECTION ===== */
+.education-stats {
+    padding: 4rem 0;
+    background: var(--white);
+    border-top: 1px solid var(--gray-100);
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background: var(--gray-50);
+    border-radius: 16px;
+    transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1),
+                box-shadow 0.4s ease,
+                background 0.3s ease;
+    cursor: default;
+}
+
+.stat-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.06);
+    background: var(--white);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--charcoal);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    transition: color 0.3s ease, transform 0.4s ease;
+}
+
+.stat-item:hover .stat-number {
+    color: var(--crimson);
+    transform: scale(1.05);
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: var(--gray-400);
+    font-weight: 500;
+    margin-top: 0.3rem;
+    transition: color 0.3s ease;
+}
+
+.stat-item:hover .stat-label {
+    color: var(--gray-600);
+}
+
+/* ===== ISSUE SECTIONS ===== */
+.education-issue {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.education-issue.reverse {
+    background: var(--gray-50);
+}
+
+.education-issue-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.education-issue-image {
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    background: var(--gray-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1),
+                box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.education-issue-image:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.image-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    color: var(--gray-300);
+    width: 100%;
+    height: 100%;
+    background: var(--gray-50);
+    transition: background 0.4s ease;
+}
+
+.education-issue-image:hover .image-placeholder {
+    background: var(--gray-100);
+}
+
+.image-placeholder i {
+    font-size: 3.5rem;
+    opacity: 0.5;
+    transition: transform 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1),
+                opacity 0.4s ease;
+}
+
+.education-issue-image:hover .image-placeholder i {
+    transform: scale(1.12) rotate(-4deg);
+    opacity: 0.7;
+}
+
+.image-placeholder span {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--gray-400);
+    transition: color 0.3s ease;
+}
+
+.education-issue-image:hover .image-placeholder span {
+    color: var(--gray-600);
+}
+
+.education-issue-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.education-issue-content h2 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--charcoal);
+    line-height: 1.2;
+    margin: 0;
+    letter-spacing: -0.02em;
+    transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.education-issue-content h2:hover {
+    transform: translateX(6px);
+}
+
+.education-issue-content p {
+    font-size: 1.05rem;
+    color: var(--gray-600);
+    line-height: 1.8;
+    max-width: 540px;
+    transition: transform 0.4s ease;
+}
+
+.education-issue-content p:hover {
+    transform: translateX(4px);
+}
+
+/* ===== EDUCATION LIST ===== */
+.education-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+.education-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    font-size: 0.98rem;
+    color: var(--gray-600);
+    line-height: 1.5;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    border-radius: 8px;
+    transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1),
+                color 0.3s ease,
+                background 0.3s ease;
+    cursor: default;
+}
+
+.education-list li:hover {
+    transform: translateX(8px);
+    color: var(--charcoal);
+    background: var(--gray-50);
+}
+
+.education-list li i {
+    color: var(--crimson);
+    font-size: 1.2rem;
+    margin-top: 0.1rem;
+    flex-shrink: 0;
+    opacity: 0.8;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.education-list li:hover i {
+    transform: scale(1.2) rotate(-5deg);
+    opacity: 1;
+}
+
+/* ===== CARDS SECTION ===== */
+.education-cards {
+    padding: 5rem 0;
+    background: var(--white);
+    border-top: 1px solid var(--gray-100);
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.cards-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.cards-header .education-tag {
+    margin: 0 auto 0.5rem;
+}
+
+.cards-header h2 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--charcoal);
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+}
+
+.cards-header p {
+    font-size: 1.05rem;
+    color: var(--gray-600);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.education-card {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--gray-100);
+    transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1),
+                box-shadow 0.4s ease;
+    cursor: default;
+}
+
+.education-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+}
+
+.card-image {
+    aspect-ratio: 16/10;
+    background: var(--gray-100);
+    overflow: hidden;
+}
+
+.card-image .image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--gray-50);
+    color: var(--gray-300);
+    transition: background 0.4s ease;
+}
+
+.education-card:hover .card-image .image-placeholder {
+    background: var(--gray-100);
+}
+
+.card-image .image-placeholder i {
+    font-size: 3rem;
+    opacity: 0.4;
+    transition: transform 0.5s ease;
+}
+
+.education-card:hover .card-image .image-placeholder i {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 0.5rem;
+}
+
+.card-content p {
+    font-size: 0.92rem;
+    color: var(--gray-600);
+    line-height: 1.6;
+}
+
+/* ===== CONCLUSION SECTION ===== */
+.education-conclusion {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.conclusion-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.conclusion-content .education-tag {
+    margin: 0 auto 0.5rem;
+}
+
+.conclusion-content h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--charcoal);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.2rem;
+}
+
+.conclusion-content p {
+    font-size: 1.15rem;
+    color: var(--gray-600);
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.conclusion-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.conclusion-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conclusion-stat span {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--crimson);
+}
+
+.conclusion-stat label {
+    font-size: 0.85rem;
+    color: var(--gray-400);
+    margin-top: 0.3rem;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+/* ===== RESPONSIVE CAROUSEL ===== */
+@media (max-width: 1024px) {
+    .carousel-slide {
+        aspect-ratio: 21/10;
+    }
+    
+    .slide-text {
+        font-size: 1.8rem;
+    }
+    
+    .carousel-slide .image-placeholder i {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .education-carousel {
+        padding: 1rem 0 0;
+    }
+    
+    .carousel-container {
+        border-radius: 12px;
+        margin: 0 1rem;
+    }
+    
+    .carousel-slide {
+        aspect-ratio: 16/9;
+    }
+    
+    .slide-text {
+        font-size: 1.4rem;
+    }
+    
+    .carousel-slide .image-placeholder i {
+        font-size: 3rem;
+    }
+    
+    .carousel-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+    
+    .carousel-btn.prev-btn {
+        left: 0.8rem;
+    }
+    
+    .carousel-btn.next-btn {
+        right: 0.8rem;
+    }
+    
+    .carousel-dots {
+        bottom: 1rem;
+        gap: 0.6rem;
+    }
+    
+    .carousel-dot {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .carousel-dot.active {
+        width: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-container {
+        margin: 0 0.8rem;
+        border-radius: 10px;
+    }
+    
+    .carousel-slide {
+        aspect-ratio: 4/3;
+    }
+    
+    .slide-text {
+        font-size: 1.1rem;
+        padding: 0 1.5rem;
+    }
+    
+    .carousel-slide .image-placeholder i {
+        font-size: 2.5rem;
+    }
+    
+    .carousel-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 0.7rem;
+    }
+    
+    .carousel-btn.prev-btn {
+        left: 0.5rem;
+    }
+    
+    .carousel-btn.next-btn {
+        right: 0.5rem;
+    }
+    
+    .carousel-dots {
+        bottom: 0.8rem;
+        gap: 0.5rem;
+    }
+    
+    .carousel-dot {
+        width: 6px;
+        height: 6px;
+    }
+    
+    .carousel-dot.active {
+        width: 16px;
+    }
+}
+
+/* ===== RESPONSIVE MAIN CONTENT ===== */
+/* Large Tablet */
+@media (max-width: 1200px) {
+    .education-hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .stats-grid {
+        max-width: 100%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .education-hero {
+        padding: 4rem 0 3rem;
+    }
+    
+    .education-hero-content h1 {
+        font-size: 2.6rem;
+    }
+    
+    .education-hero-content p {
+        font-size: 1.1rem;
+    }
+    
+    .education-issue-grid {
+        gap: 3rem;
+    }
+    
+    .education-issue-content h2 {
+        font-size: 2.2rem;
+    }
+    
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .stat-number {
+        font-size: 2.6rem;
+    }
+    
+    .conclusion-content h2 {
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .education-hero {
+        padding: 3rem 0 2rem;
+    }
+    
+    .education-hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .education-hero-content p {
+        font-size: 1rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .stat-item {
+        padding: 1rem;
+    }
+    
+    .stat-number {
+        font-size: 2.2rem;
+    }
+    
+    .stat-label {
+        font-size: 0.9rem;
+    }
+    
+    .education-issue {
+        padding: 3rem 0;
+    }
+    
+    .education-issue-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .education-issue.reverse .education-issue-grid .education-issue-image {
+        order: 0;
+    }
+    
+    .education-issue.reverse .education-issue-grid .education-issue-content {
+        order: 1;
+    }
+    
+    .education-issue-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .education-issue-content p {
+        max-width: 100%;
+        font-size: 1rem;
+    }
+    
+    .education-issue-image {
+        aspect-ratio: 16/10;
+    }
+    
+    .cards-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    
+    .cards-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .education-cards {
+        padding: 3rem 0;
+    }
+    
+    .conclusion-content h2 {
+        font-size: 2.2rem;
+    }
+    
+    .conclusion-content p {
+        font-size: 1rem;
+    }
+    
+    .conclusion-stats {
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+    
+    .conclusion-stat span {
+        font-size: 2rem;
+    }
+    
+    .education-conclusion {
+        padding: 3rem 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .education-hero {
+        padding: 2.5rem 0 1.5rem;
+    }
+    
+    .education-hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .education-hero-content p {
+        font-size: 0.95rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+    }
+    
+    .stat-item {
+        padding: 0.8rem;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem;
+    }
+    
+    .education-issue-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .education-issue-content p {
+        font-size: 0.92rem;
+    }
+    
+    .education-list li {
+        font-size: 0.88rem;
+    }
+    
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .cards-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .cards-header p {
+        font-size: 0.92rem;
+    }
+    
+    .card-content h3 {
+        font-size: 1rem;
+    }
+    
+    .card-content p {
+        font-size: 0.85rem;
+    }
+    
+    .conclusion-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .conclusion-content p {
+        font-size: 0.95rem;
+    }
+    
+    .conclusion-stats {
+        gap: 1.5rem;
+        flex-direction: column;
+    }
+    
+    .conclusion-stat span {
+        font-size: 1.8rem;
+    }
+    
+    .education-tag {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.8rem;
+    }
+    
+    .image-placeholder i {
+        font-size: 2.2rem;
+    }
+    
+    .image-placeholder span {
+        font-size: 0.8rem;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 360px) {
+    .education-hero-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .stats-grid {
+        gap: 0.6rem;
+    }
+    
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .stat-label {
+        font-size: 0.7rem;
+    }
+    
+    .conclusion-content h2 {
+        font-size: 1.5rem;
+    }
+}

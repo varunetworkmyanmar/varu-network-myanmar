@@ -1,0 +1,596 @@
+/* ========================================
+   MISSION PAGE STYLES - MODERN WITH ANIMATIONS
+   ======================================== */
+
+/* ===== HERO SECTION ===== */
+.mission-hero {
+    padding: 6rem 0 5rem;
+    background: var(--white);
+}
+
+.mission-hero-content {
+    max-width: 700px;
+}
+
+.mission-hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--charcoal);
+    line-height: 1.15;
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.02em;
+    transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.mission-hero-content h1:hover {
+    transform: translateX(6px);
+}
+
+.mission-hero-content p {
+    font-size: 1.2rem;
+    color: var(--gray-600);
+    line-height: 1.7;
+    max-width: 550px;
+    font-weight: 400;
+    transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.mission-hero-content p:hover {
+    transform: translateX(4px);
+}
+
+/* ===== STATS SECTION ===== */
+.mission-stats {
+    padding: 4rem 0;
+    background: var(--white);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background: var(--gray-50);
+    border-radius: 16px;
+    transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1), 
+                box-shadow 0.4s ease,
+                background 0.3s ease;
+    cursor: default;
+}
+
+.stat-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.06);
+    background: var(--white);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--charcoal);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    transition: color 0.3s ease, transform 0.4s ease;
+}
+
+.stat-item:hover .stat-number {
+    color: var(--crimson);
+    transform: scale(1.05);
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: var(--gray-400);
+    font-weight: 500;
+    margin-top: 0.3rem;
+    transition: color 0.3s ease;
+}
+
+.stat-item:hover .stat-label {
+    color: var(--gray-600);
+}
+
+/* ===== ABOUT SECTION ===== */
+.mission-about {
+    padding: 5rem 0;
+    background: var(--white);
+    border-top: 1px solid var(--gray-100);
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.mission-about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.mission-about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.mission-tag {
+    display: inline-block;
+    color: var(--crimson);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    padding: 0.3rem 1rem;
+    width: fit-content;
+    transition: transform 0.3s ease, background 0.3s ease;
+    cursor: default;
+}
+
+.mission-tag:hover {
+    transform: translateX(4px);
+}
+
+.mission-about-content h2 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--charcoal);
+    line-height: 1.2;
+    margin: 0;
+    letter-spacing: -0.02em;
+    transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.mission-about-content h2:hover {
+    transform: translateX(6px);
+}
+
+.mission-about-content p {
+    font-size: 1.05rem;
+    color: var(--gray-600);
+    line-height: 1.8;
+    max-width: 540px;
+    transition: transform 0.4s ease;
+}
+
+.mission-about-content p:hover {
+    transform: translateX(4px);
+}
+
+.mission-about-image {
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    background: var(--gray-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1), 
+                box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.mission-about-image:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.image-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    color: var(--gray-300);
+    width: 100%;
+    height: 100%;
+    background: var(--gray-50);
+    transition: background 0.4s ease;
+}
+
+.mission-about-image:hover .image-placeholder {
+    background: var(--gray-100);
+}
+
+.image-placeholder i {
+    font-size: 3.5rem;
+    opacity: 0.5;
+    transition: transform 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1),
+                opacity 0.4s ease;
+}
+
+.mission-about-image:hover .image-placeholder i {
+    transform: scale(1.12) rotate(-4deg);
+    opacity: 0.7;
+}
+
+.image-placeholder span {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--gray-400);
+    transition: color 0.3s ease;
+}
+
+.mission-about-image:hover .image-placeholder span {
+    color: var(--gray-600);
+}
+
+/* ===== DETAIL SECTION ===== */
+.mission-detail {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.mission-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.mission-detail-image {
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    background: var(--gray-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1), 
+                box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.mission-detail-image:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.mission-detail-image .image-placeholder i {
+    font-size: 3.5rem;
+}
+
+.mission-detail-image:hover .image-placeholder i {
+    transform: scale(1.12) rotate(4deg);
+    opacity: 0.7;
+}
+
+.mission-detail-image:hover .image-placeholder {
+    background: var(--gray-100);
+}
+
+.mission-detail-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.mission-detail-content .mission-tag {
+    color: var(--crimson);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    padding: 0.3rem 1rem;
+    width: fit-content;
+    transition: transform 0.3s ease;
+}
+
+.mission-detail-content .mission-tag:hover {
+    transform: translateX(4px);
+}
+
+.mission-detail-content h2 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--charcoal);
+    line-height: 1.2;
+    margin: 0;
+    letter-spacing: -0.02em;
+    transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.mission-detail-content h2:hover {
+    transform: translateX(6px);
+}
+
+.mission-detail-content p {
+    font-size: 1.05rem;
+    color: var(--gray-600);
+    line-height: 1.8;
+    max-width: 540px;
+    transition: transform 0.4s ease;
+}
+
+.mission-detail-content p:hover {
+    transform: translateX(4px);
+}
+
+/* ===== MISSION LIST ===== */
+.mission-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+.mission-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    font-size: 0.98rem;
+    color: var(--gray-600);
+    line-height: 1.5;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    border-radius: 8px;
+    transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1),
+                color 0.3s ease,
+                background 0.3s ease;
+    cursor: default;
+}
+
+.mission-list li:hover {
+    transform: translateX(8px);
+    color: var(--charcoal);
+    background: var(--gray-50);
+}
+
+.mission-list li i {
+    color: var(--crimson);
+    font-size: 1.1rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+    opacity: 0.8;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.mission-list li:hover i {
+    transform: scale(1.2) rotate(-5deg);
+    opacity: 1;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+/* Large Tablet */
+@media (max-width: 1200px) {
+    .mission-hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .stats-grid {
+        max-width: 100%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .mission-hero {
+        padding: 4rem 0 3rem;
+    }
+    
+    .mission-hero-content h1 {
+        font-size: 2.6rem;
+    }
+    
+    .mission-hero-content p {
+        font-size: 1.1rem;
+    }
+    
+    .mission-about-grid,
+    .mission-detail-grid {
+        gap: 3rem;
+    }
+    
+    .mission-about-content h2,
+    .mission-detail-content h2 {
+        font-size: 2.2rem;
+    }
+    
+    .stat-number {
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .mission-hero {
+        padding: 3rem 0 2rem;
+    }
+    
+    .mission-hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .mission-hero-content p {
+        font-size: 1rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 0 0.5rem;
+    }
+    
+    .stat-item {
+        padding: 1.2rem 0.8rem;
+    }
+    
+    .stat-item:hover {
+        transform: translateY(-6px) scale(1.02);
+    }
+    
+    .stat-number {
+        font-size: 2.2rem;
+    }
+    
+    .stat-label {
+        font-size: 0.9rem;
+    }
+    
+    .mission-about,
+    .mission-detail {
+        padding: 3rem 0;
+    }
+    
+    .mission-about-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .mission-about-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .mission-about-content p {
+        max-width: 100%;
+        font-size: 1rem;
+    }
+    
+    .mission-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .mission-detail-grid .mission-detail-image {
+        order: 0;
+    }
+    
+    .mission-detail-grid .mission-detail-content {
+        order: 1;
+    }
+    
+    .mission-detail-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .mission-detail-content p {
+        max-width: 100%;
+        font-size: 1rem;
+    }
+    
+    .mission-about-image,
+    .mission-detail-image {
+        aspect-ratio: 16/10;
+    }
+    
+    .image-placeholder i {
+        font-size: 2.8rem;
+    }
+    
+    .mission-about-image:hover,
+    .mission-detail-image:hover {
+        transform: translateY(-4px) scale(1.01);
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .mission-hero {
+        padding: 2.5rem 0 1.5rem;
+    }
+    
+    .mission-hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .mission-hero-content h1:hover {
+        transform: translateX(4px);
+    }
+    
+    .mission-hero-content p {
+        font-size: 0.95rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        padding: 0;
+    }
+    
+    .stat-item {
+        padding: 1rem 0.5rem;
+    }
+    
+    .stat-item:hover {
+        transform: translateY(-4px) scale(1.02);
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem;
+    }
+    
+    .mission-about-content h2,
+    .mission-detail-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .mission-about-content h2:hover,
+    .mission-detail-content h2:hover {
+        transform: translateX(4px);
+    }
+    
+    .mission-about-content p,
+    .mission-detail-content p {
+        font-size: 0.92rem;
+    }
+    
+    .mission-list li {
+        font-size: 0.88rem;
+        padding: 0.4rem 0.4rem 0.4rem 0;
+    }
+    
+    .mission-list li:hover {
+        transform: translateX(4px);
+    }
+    
+    .image-placeholder i {
+        font-size: 2.2rem;
+    }
+    
+    .image-placeholder span {
+        font-size: 0.8rem;
+    }
+    
+    .mission-tag {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.8rem;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 360px) {
+    .mission-hero-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .stats-grid {
+        gap: 0.8rem;
+    }
+    
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .stat-label {
+        font-size: 0.7rem;
+    }
+    
+    .stat-item {
+        padding: 0.8rem 0.3rem;
+    }
+}

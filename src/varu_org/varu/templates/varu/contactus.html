@@ -1,13 +1,98 @@
 {% extends 'varu/base.html' %}
 {% load static %}
-{% block extra_css%}
-<link rel="stylesheet" href="{% static 'varu/css/home.css' %}">
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'varu/css/contactus.css' %}">
 {% endblock %}
+
 {% block content %}
+<!-- ===== CONTACT HERO ===== -->
+<section class="contact-hero">
+    <div class="container">
+        <div class="contact-hero-content">
+            <span class="contact-tag">Get in Touch</span>
+            <h1>We'd Love to<br>Hear From You</h1>
+            <p>Have questions, ideas, or want to get involved? Reach out to us — we're here to listen and work together for a better future.</p>
+        </div>
+    </div>
 </section>
-  <div class="container">
-    <h1>Contact us</h1>
-    <p>Meet our team and learn about our values.</p>
-  </div>
+
+<!-- ===== CONTACT INFO CARDS ===== -->
+<section class="contact-info">
+    <div class="container">
+        <div class="contact-grid">
+            <!-- Email Card -->
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3>Email Us</h3>
+                <p>Send us an email and we'll get back to you within 24 hours.</p>
+                <a href="mailto:info@varunetwork.org" class="contact-link">info@varunetwork.org</a>
+            </div>
+
+            <!-- Phone Card -->
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <h3>Call Us</h3>
+                <p>Our team is available Monday to Friday, 9:00 AM - 6:00 PM.</p>
+                <a href="tel:+959123456789" class="contact-link">+95 9 123 456 789</a>
+            </div>
+        </div>
+    </div>
 </section>
+
+<!-- ===== CONTACT LAYER / TEXT SECTION ===== -->
+<section class="contact-layer">
+    <div class="container">
+        <div class="layer-wrapper">
+            <div class="layer-content">
+                <div class="layer-text">
+                    <span class="layer-tag">Connect With Us</span>
+                    <h2>Together We Can<br>Make a Difference</h2>
+                    <p>Whether you're looking to volunteer, donate, partner with us, or simply learn more about our work — we want to hear from you. Every conversation brings us closer to our mission of empowering communities across Myanmar.</p>
+                    <div class="layer-details">
+                        <div class="layer-detail">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <label>Email</label>
+                                <span>info@varunetwork.org</span>
+                            </div>
+                        </div>
+                        <div class="layer-detail">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <label>Phone</label>
+                                <span>+95 9 123 456 789</span>
+                            </div>
+                        </div>
+                        <div class="layer-detail">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <label>Office Hours</label>
+                                <span>Mon - Fri, 9:00 AM - 6:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== RESPONSE SECTION ===== -->
+<section class="contact-response">
+    <div class="container">
+        <div class="response-content">
+            <span class="contact-tag">We're Here</span>
+            <h2>We Respond Quickly</h2>
+            <p>Your message matters to us. We aim to respond to all inquiries within 24 hours. If your matter is urgent, please call us directly.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+{% comment %} <script src="{% static 'varu/js/contactus.js' %}"></script> {% endcomment %}
 {% endblock %}
