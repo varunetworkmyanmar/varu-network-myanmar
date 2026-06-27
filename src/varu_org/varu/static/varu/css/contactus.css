@@ -16,7 +16,6 @@
     display: inline-block;
     color: var(--crimson);
     font-weight: 700;
-    font-size: 0.75rem;
     letter-spacing: 2.5px;
     text-transform: uppercase;
     padding: 0.3rem 1rem;
@@ -31,7 +30,6 @@
 }
 
 .contact-hero-content h1 {
-    font-size: 3.5rem;
     font-weight: 800;
     color: var(--charcoal);
     line-height: 1.15;
@@ -45,7 +43,6 @@
 }
 
 .contact-hero-content p {
-    font-size: 1.2rem;
     color: var(--gray-600);
     line-height: 1.8;
     max-width: 600px;
@@ -105,7 +102,6 @@
 }
 
 .contact-icon i {
-    font-size: 1.8rem;
     color: var(--crimson);
     opacity: 0.8;
     transition: transform 0.4s ease;
@@ -116,21 +112,18 @@
 }
 
 .contact-card h3 {
-    font-size: 1.2rem;
     font-weight: 700;
     color: var(--charcoal);
     margin-bottom: 0.5rem;
 }
 
 .contact-card p {
-    font-size: 0.9rem;
     color: var(--gray-600);
     line-height: 1.6;
     margin-bottom: 1rem;
 }
 
 .contact-link {
-    font-size: 1rem;
     font-weight: 600;
     color: var(--crimson);
     text-decoration: none;
@@ -186,7 +179,6 @@
     display: inline-block;
     color: var(--crimson);
     font-weight: 700;
-    font-size: 0.75rem;
     letter-spacing: 2.5px;
     text-transform: uppercase;
     padding: 0.3rem 1rem;
@@ -199,7 +191,6 @@
 }
 
 .layer-text h2 {
-    font-size: 2.8rem;
     font-weight: 800;
     color: var(--charcoal);
     line-height: 1.15;
@@ -207,7 +198,6 @@
 }
 
 .layer-text p {
-    font-size: 1.1rem;
     color: var(--gray-600);
     line-height: 1.8;
     max-width: 600px;
@@ -238,7 +228,6 @@
 }
 
 .layer-detail i {
-    font-size: 1.2rem;
     color: var(--crimson);
     width: 24px;
     text-align: center;
@@ -250,7 +239,6 @@
 }
 
 .layer-detail label {
-    font-size: 0.7rem;
     font-weight: 600;
     color: var(--gray-400);
     text-transform: uppercase;
@@ -258,7 +246,6 @@
 }
 
 .layer-detail span {
-    font-size: 0.95rem;
     font-weight: 500;
     color: var(--charcoal);
 }
@@ -280,7 +267,6 @@
 }
 
 .response-content h2 {
-    font-size: 2.4rem;
     font-weight: 800;
     color: var(--charcoal);
     letter-spacing: -0.02em;
@@ -288,7 +274,6 @@
 }
 
 .response-content p {
-    font-size: 1.05rem;
     color: var(--gray-600);
     line-height: 1.8;
     max-width: 550px;
@@ -296,7 +281,7 @@
 }
 
 /* ========================================
-   RESPONSIVE
+   RESPONSIVE - LAYOUT ONLY (NO FONT SIZES)
    ======================================== */
 
 /* Tablet */
@@ -305,24 +290,12 @@
         padding: 4rem 0 3rem;
     }
     
-    .contact-hero-content h1 {
-        font-size: 2.6rem;
-    }
-    
-    .contact-hero-content p {
-        font-size: 1.1rem;
-    }
-    
     .contact-grid {
         gap: 1.5rem;
     }
     
     .contact-card {
         padding: 2rem 1.5rem;
-    }
-    
-    .layer-text h2 {
-        font-size: 2.2rem;
     }
     
     .layer-content {
@@ -335,14 +308,6 @@
         padding: 3rem 0 2rem;
     }
     
-    .contact-hero-content h1 {
-        font-size: 2.2rem;
-    }
-    
-    .contact-hero-content p {
-        font-size: 1rem;
-    }
-    
     .contact-grid {
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
@@ -352,25 +317,9 @@
         padding: 1.5rem 1rem;
     }
     
-    .contact-card h3 {
-        font-size: 1rem;
-    }
-    
-    .contact-card p {
-        font-size: 0.85rem;
-    }
-    
-    .contact-link {
-        font-size: 0.9rem;
-    }
-    
     .contact-icon {
         width: 54px;
         height: 54px;
-    }
-    
-    .contact-icon i {
-        font-size: 1.5rem;
     }
     
     .layer-wrapper {
@@ -381,29 +330,9 @@
         padding: 2.5rem 2rem;
     }
     
-    .layer-text h2 {
-        font-size: 1.8rem;
-    }
-    
-    .layer-text p {
-        font-size: 1rem;
-    }
-    
     .layer-detail {
         max-width: 100%;
         padding: 0.7rem 1rem;
-    }
-    
-    .layer-detail span {
-        font-size: 0.85rem;
-    }
-    
-    .response-content h2 {
-        font-size: 1.8rem;
-    }
-    
-    .response-content p {
-        font-size: 0.95rem;
     }
 }
 
@@ -411,14 +340,6 @@
 @media (max-width: 480px) {
     .contact-hero {
         padding: 2.5rem 0 1.5rem;
-    }
-    
-    .contact-hero-content h1 {
-        font-size: 1.8rem;
-    }
-    
-    .contact-hero-content p {
-        font-size: 0.95rem;
     }
     
     .contact-grid {
@@ -436,10 +357,6 @@
         height: 50px;
     }
     
-    .contact-icon i {
-        font-size: 1.3rem;
-    }
-    
     .layer-wrapper {
         min-height: 250px;
         border-radius: 16px;
@@ -449,37 +366,11 @@
         padding: 2rem 1.5rem;
     }
     
-    .layer-text h2 {
-        font-size: 1.5rem;
-    }
-    
-    .layer-text p {
-        font-size: 0.92rem;
-    }
-    
     .layer-detail {
         padding: 0.6rem 0.8rem;
     }
     
     .layer-detail i {
-        font-size: 1rem;
         width: 20px;
-    }
-    
-    .layer-detail span {
-        font-size: 0.8rem;
-    }
-    
-    .response-content h2 {
-        font-size: 1.5rem;
-    }
-    
-    .response-content p {
-        font-size: 0.9rem;
-    }
-    
-    .contact-tag {
-        font-size: 0.7rem;
-        padding: 0.2rem 0.8rem;
     }
 }

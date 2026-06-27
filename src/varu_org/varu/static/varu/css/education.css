@@ -46,12 +46,10 @@
 }
 
 .carousel-slide .image-placeholder i {
-    font-size: 5rem;
     opacity: 0.4;
 }
 
 .slide-text {
-    font-size: 2.2rem;
     font-weight: 700;
     color: var(--charcoal);
     opacity: 0.8;
@@ -78,7 +76,6 @@
     align-items: center;
     justify-content: center;
     color: var(--charcoal);
-    font-size: 1.2rem;
 }
 
 .carousel-btn:hover {
@@ -154,7 +151,6 @@
     color: white;
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
-    font-size: 0.7rem;
     z-index: 10;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -180,7 +176,6 @@
     display: inline-block;
     color: var(--crimson);
     font-weight: 700;
-    font-size: 0.75rem;
     letter-spacing: 2.5px;
     text-transform: uppercase;
     padding: 0.3rem 1rem;
@@ -195,7 +190,6 @@
 }
 
 .education-hero-content h1 {
-    font-size: 3.5rem;
     font-weight: 800;
     color: var(--charcoal);
     line-height: 1.15;
@@ -209,7 +203,6 @@
 }
 
 .education-hero-content p {
-    font-size: 1.2rem;
     color: var(--gray-600);
     line-height: 1.8;
     max-width: 600px;
@@ -258,7 +251,6 @@
 }
 
 .stat-number {
-    font-size: 3rem;
     font-weight: 800;
     color: var(--charcoal);
     line-height: 1.2;
@@ -272,7 +264,6 @@
 }
 
 .stat-label {
-    font-size: 1rem;
     color: var(--gray-400);
     font-weight: 500;
     margin-top: 0.3rem;
@@ -337,7 +328,6 @@
 }
 
 .image-placeholder i {
-    font-size: 3.5rem;
     opacity: 0.5;
     transition: transform 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1),
                 opacity 0.4s ease;
@@ -349,7 +339,6 @@
 }
 
 .image-placeholder span {
-    font-size: 0.95rem;
     font-weight: 500;
     color: var(--gray-400);
     transition: color 0.3s ease;
@@ -366,7 +355,6 @@
 }
 
 .education-issue-content h2 {
-    font-size: 2.6rem;
     font-weight: 800;
     color: var(--charcoal);
     line-height: 1.2;
@@ -380,7 +368,6 @@
 }
 
 .education-issue-content p {
-    font-size: 1.05rem;
     color: var(--gray-600);
     line-height: 1.8;
     max-width: 540px;
@@ -405,7 +392,6 @@
     display: flex;
     align-items: flex-start;
     gap: 0.8rem;
-    font-size: 0.98rem;
     color: var(--gray-600);
     line-height: 1.5;
     padding: 0.5rem 0.5rem 0.5rem 0;
@@ -424,7 +410,6 @@
 
 .education-list li i {
     color: var(--crimson);
-    font-size: 1.2rem;
     margin-top: 0.1rem;
     flex-shrink: 0;
     opacity: 0.8;
@@ -454,7 +439,6 @@
 }
 
 .cards-header h2 {
-    font-size: 2.6rem;
     font-weight: 800;
     color: var(--charcoal);
     letter-spacing: -0.02em;
@@ -462,7 +446,6 @@
 }
 
 .cards-header p {
-    font-size: 1.05rem;
     color: var(--gray-600);
     max-width: 600px;
     margin: 0 auto;
@@ -512,7 +495,6 @@
 }
 
 .card-image .image-placeholder i {
-    font-size: 3rem;
     opacity: 0.4;
     transition: transform 0.5s ease;
 }
@@ -526,14 +508,12 @@
 }
 
 .card-content h3 {
-    font-size: 1.15rem;
     font-weight: 700;
     color: var(--charcoal);
     margin-bottom: 0.5rem;
 }
 
 .card-content p {
-    font-size: 0.92rem;
     color: var(--gray-600);
     line-height: 1.6;
 }
@@ -555,7 +535,6 @@
 }
 
 .conclusion-content h2 {
-    font-size: 3rem;
     font-weight: 800;
     color: var(--charcoal);
     line-height: 1.2;
@@ -564,7 +543,6 @@
 }
 
 .conclusion-content p {
-    font-size: 1.15rem;
     color: var(--gray-600);
     line-height: 1.8;
     max-width: 600px;
@@ -584,33 +562,23 @@
 }
 
 .conclusion-stat span {
-    font-size: 2.5rem;
     font-weight: 800;
     color: var(--crimson);
 }
 
 .conclusion-stat label {
-    font-size: 0.85rem;
     color: var(--gray-400);
     margin-top: 0.3rem;
 }
 
 /* ========================================
-   RESPONSIVE
+   RESPONSIVE - LAYOUT ONLY (NO FONT SIZES)
    ======================================== */
 
 /* ===== RESPONSIVE CAROUSEL ===== */
 @media (max-width: 1024px) {
     .carousel-slide {
         aspect-ratio: 21/10;
-    }
-    
-    .slide-text {
-        font-size: 1.8rem;
-    }
-    
-    .carousel-slide .image-placeholder i {
-        font-size: 4rem;
     }
 }
 
@@ -628,18 +596,9 @@
         aspect-ratio: 16/9;
     }
     
-    .slide-text {
-        font-size: 1.4rem;
-    }
-    
-    .carousel-slide .image-placeholder i {
-        font-size: 3rem;
-    }
-    
     .carousel-btn {
         width: 36px;
         height: 36px;
-        font-size: 0.9rem;
     }
     
     .carousel-btn.prev-btn {
@@ -676,18 +635,12 @@
     }
     
     .slide-text {
-        font-size: 1.1rem;
         padding: 0 1.5rem;
-    }
-    
-    .carousel-slide .image-placeholder i {
-        font-size: 2.5rem;
     }
     
     .carousel-btn {
         width: 30px;
         height: 30px;
-        font-size: 0.7rem;
     }
     
     .carousel-btn.prev-btn {
@@ -716,10 +669,6 @@
 /* ===== RESPONSIVE MAIN CONTENT ===== */
 /* Large Tablet */
 @media (max-width: 1200px) {
-    .education-hero-content h1 {
-        font-size: 3rem;
-    }
-    
     .stats-grid {
         max-width: 100%;
     }
@@ -731,47 +680,19 @@
         padding: 4rem 0 3rem;
     }
     
-    .education-hero-content h1 {
-        font-size: 2.6rem;
-    }
-    
-    .education-hero-content p {
-        font-size: 1.1rem;
-    }
-    
     .education-issue-grid {
         gap: 3rem;
-    }
-    
-    .education-issue-content h2 {
-        font-size: 2.2rem;
     }
     
     .cards-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
-    
-    .stat-number {
-        font-size: 2.6rem;
-    }
-    
-    .conclusion-content h2 {
-        font-size: 2.6rem;
-    }
 }
 
 @media (max-width: 768px) {
     .education-hero {
         padding: 3rem 0 2rem;
-    }
-    
-    .education-hero-content h1 {
-        font-size: 2.2rem;
-    }
-    
-    .education-hero-content p {
-        font-size: 1rem;
     }
     
     .stats-grid {
@@ -781,14 +702,6 @@
     
     .stat-item {
         padding: 1rem;
-    }
-    
-    .stat-number {
-        font-size: 2.2rem;
-    }
-    
-    .stat-label {
-        font-size: 0.9rem;
     }
     
     .education-issue {
@@ -808,13 +721,8 @@
         order: 1;
     }
     
-    .education-issue-content h2 {
-        font-size: 1.8rem;
-    }
-    
     .education-issue-content p {
         max-width: 100%;
-        font-size: 1rem;
     }
     
     .education-issue-image {
@@ -826,29 +734,13 @@
         gap: 1rem;
     }
     
-    .cards-header h2 {
-        font-size: 1.8rem;
-    }
-    
     .education-cards {
         padding: 3rem 0;
-    }
-    
-    .conclusion-content h2 {
-        font-size: 2.2rem;
-    }
-    
-    .conclusion-content p {
-        font-size: 1rem;
     }
     
     .conclusion-stats {
         gap: 2rem;
         flex-wrap: wrap;
-    }
-    
-    .conclusion-stat span {
-        font-size: 2rem;
     }
     
     .education-conclusion {
@@ -862,14 +754,6 @@
         padding: 2.5rem 0 1.5rem;
     }
     
-    .education-hero-content h1 {
-        font-size: 1.8rem;
-    }
-    
-    .education-hero-content p {
-        font-size: 0.95rem;
-    }
-    
     .stats-grid {
         grid-template-columns: 1fr 1fr;
         gap: 0.8rem;
@@ -879,53 +763,9 @@
         padding: 0.8rem;
     }
     
-    .stat-number {
-        font-size: 1.8rem;
-    }
-    
-    .stat-label {
-        font-size: 0.8rem;
-    }
-    
-    .education-issue-content h2 {
-        font-size: 1.5rem;
-    }
-    
-    .education-issue-content p {
-        font-size: 0.92rem;
-    }
-    
-    .education-list li {
-        font-size: 0.88rem;
-    }
-    
     .cards-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
-    }
-    
-    .cards-header h2 {
-        font-size: 1.5rem;
-    }
-    
-    .cards-header p {
-        font-size: 0.92rem;
-    }
-    
-    .card-content h3 {
-        font-size: 1rem;
-    }
-    
-    .card-content p {
-        font-size: 0.85rem;
-    }
-    
-    .conclusion-content h2 {
-        font-size: 1.8rem;
-    }
-    
-    .conclusion-content p {
-        font-size: 0.95rem;
     }
     
     .conclusion-stats {
@@ -933,43 +773,14 @@
         flex-direction: column;
     }
     
-    .conclusion-stat span {
-        font-size: 1.8rem;
-    }
-    
     .education-tag {
-        font-size: 0.7rem;
         padding: 0.2rem 0.8rem;
-    }
-    
-    .image-placeholder i {
-        font-size: 2.2rem;
-    }
-    
-    .image-placeholder span {
-        font-size: 0.8rem;
     }
 }
 
 /* Small Mobile */
 @media (max-width: 360px) {
-    .education-hero-content h1 {
-        font-size: 1.5rem;
-    }
-    
     .stats-grid {
         gap: 0.6rem;
-    }
-    
-    .stat-number {
-        font-size: 1.5rem;
-    }
-    
-    .stat-label {
-        font-size: 0.7rem;
-    }
-    
-    .conclusion-content h2 {
-        font-size: 1.5rem;
     }
 }

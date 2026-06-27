@@ -16,7 +16,6 @@
     display: inline-block;
     color: var(--crimson);
     font-weight: 700;
-    font-size: 0.75rem;
     letter-spacing: 2.5px;
     text-transform: uppercase;
     padding: 0.3rem 1rem;
@@ -31,7 +30,6 @@
 }
 
 .health-hero-content h1 {
-    font-size: 3.5rem;
     font-weight: 800;
     color: var(--charcoal);
     line-height: 1.15;
@@ -45,19 +43,17 @@
 }
 
 .health-hero-content p {
-    font-size: 1.5rem;
     font-weight: 600;
     color: var(--crimson);
     margin-bottom: 1.2rem;
 }
 
 .health-hero-desc {
-    font-size: 1.1rem !important;
-    font-weight: 400 !important;
-    color: var(--gray-600) !important;
+    font-weight: 400;
+    color: var(--gray-600);
     line-height: 1.8;
     max-width: 550px;
-    margin-bottom: 0 !important;
+    margin-bottom: 0;
     transition: transform 0.4s ease;
 }
 
@@ -100,7 +96,6 @@
 }
 
 .health-stat-number {
-    font-size: 3rem;
     font-weight: 800;
     color: var(--charcoal);
     line-height: 1.2;
@@ -114,7 +109,6 @@
 }
 
 .health-stat-label {
-    font-size: 1rem;
     color: var(--gray-400);
     font-weight: 500;
     margin-top: 0.3rem;
@@ -177,7 +171,6 @@
 }
 
 .image-placeholder i {
-    font-size: 3.5rem;
     opacity: 0.5;
     transition: transform 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1),
                 opacity 0.4s ease;
@@ -189,7 +182,6 @@
 }
 
 .image-placeholder span {
-    font-size: 0.95rem;
     font-weight: 500;
     color: var(--gray-400);
     transition: color 0.3s ease;
@@ -206,7 +198,6 @@
 }
 
 .health-about-content h2 {
-    font-size: 2.6rem;
     font-weight: 800;
     color: var(--charcoal);
     line-height: 1.2;
@@ -220,7 +211,6 @@
 }
 
 .health-about-content p {
-    font-size: 1.05rem;
     color: var(--gray-600);
     line-height: 1.8;
     max-width: 540px;
@@ -245,7 +235,6 @@
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    font-size: 0.98rem;
     color: var(--gray-600);
     line-height: 1.5;
     padding: 0.5rem 0.5rem 0.5rem 0;
@@ -264,7 +253,6 @@
 
 .health-list li i {
     color: var(--crimson);
-    font-size: 1.2rem;
     flex-shrink: 0;
     opacity: 0.8;
     transition: transform 0.4s ease, opacity 0.3s ease;
@@ -307,10 +295,6 @@
     box-shadow: 0 16px 50px rgba(0, 0, 0, 0.08);
 }
 
-.health-detail-image .image-placeholder i {
-    font-size: 3.5rem;
-}
-
 .health-detail-image:hover .image-placeholder i {
     transform: scale(1.12) rotate(4deg);
     opacity: 0.7;
@@ -327,7 +311,6 @@
 }
 
 .health-detail-content h2 {
-    font-size: 2.6rem;
     font-weight: 800;
     color: var(--charcoal);
     line-height: 1.2;
@@ -341,7 +324,6 @@
 }
 
 .health-detail-content p {
-    font-size: 1.05rem;
     color: var(--gray-600);
     line-height: 1.8;
     max-width: 540px;
@@ -365,14 +347,12 @@
 }
 
 .detail-stat span {
-    font-size: 2rem;
     font-weight: 800;
     color: var(--charcoal);
     line-height: 1.2;
 }
 
 .detail-stat label {
-    font-size: 0.85rem;
     color: var(--gray-400);
     font-weight: 500;
     margin-top: 0.2rem;
@@ -395,7 +375,6 @@
 }
 
 .health-gallery-header h2 {
-    font-size: 2.4rem;
     font-weight: 800;
     color: var(--charcoal);
     letter-spacing: -0.02em;
@@ -433,7 +412,6 @@
 }
 
 .gallery-item .image-placeholder i {
-    font-size: 2.5rem;
     opacity: 0.4;
     transition: transform 0.4s ease, opacity 0.3s ease;
 }
@@ -444,7 +422,6 @@
 }
 
 .gallery-item .image-placeholder span {
-    font-size: 0.8rem;
     margin-top: 0.3rem;
 }
 
@@ -502,7 +479,6 @@
     height: 48px;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 1.5rem;
     color: var(--white);
     transition: all 0.3s ease;
     display: flex;
@@ -553,12 +529,10 @@
 }
 
 .lightbox-image i {
-    font-size: 5rem;
     color: rgba(255, 255, 255, 0.2);
 }
 
 .lightbox-image span {
-    font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.3);
     margin-top: 0.5rem;
 }
@@ -583,7 +557,6 @@
     height: 48px;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 1.3rem;
     color: var(--white);
     transition: all 0.3s ease;
     display: flex;
@@ -598,7 +571,6 @@
 }
 
 .lightbox-counter {
-    font-size: 1rem;
     color: rgba(255, 255, 255, 0.7);
     font-weight: 500;
     min-width: 60px;
@@ -606,15 +578,11 @@
 }
 
 /* ========================================
-   RESPONSIVE
+   RESPONSIVE - LAYOUT ONLY (NO FONT SIZES)
    ======================================== */
 
 /* Large Tablet */
 @media (max-width: 1200px) {
-    .health-hero-content h1 {
-        font-size: 3rem;
-    }
-    
     .health-stats-grid {
         max-width: 100%;
     }
@@ -626,30 +594,9 @@
         padding: 4rem 0 3rem;
     }
     
-    .health-hero-content h1 {
-        font-size: 2.6rem;
-    }
-    
-    .health-hero-content p {
-        font-size: 1.3rem;
-    }
-    
-    .health-hero-desc {
-        font-size: 1rem !important;
-    }
-    
     .health-about-grid,
     .health-detail-grid {
         gap: 3rem;
-    }
-    
-    .health-about-content h2,
-    .health-detail-content h2 {
-        font-size: 2.2rem;
-    }
-    
-    .health-stat-number {
-        font-size: 2.6rem;
     }
     
     .health-gallery-grid {
@@ -662,18 +609,6 @@
         padding: 3rem 0 2rem;
     }
     
-    .health-hero-content h1 {
-        font-size: 2.2rem;
-    }
-    
-    .health-hero-content p {
-        font-size: 1.1rem;
-    }
-    
-    .health-hero-desc {
-        font-size: 0.95rem !important;
-    }
-    
     .health-stats-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
@@ -682,14 +617,6 @@
     
     .health-stat-item {
         padding: 1rem 0.5rem;
-    }
-    
-    .health-stat-number {
-        font-size: 2rem;
-    }
-    
-    .health-stat-label {
-        font-size: 0.8rem;
     }
     
     .health-about,
@@ -703,13 +630,8 @@
         gap: 2.5rem;
     }
     
-    .health-about-content h2 {
-        font-size: 1.8rem;
-    }
-    
     .health-about-content p {
         max-width: 100%;
-        font-size: 1rem;
     }
     
     .health-detail-grid {
@@ -725,13 +647,8 @@
         order: 1;
     }
     
-    .health-detail-content h2 {
-        font-size: 1.8rem;
-    }
-    
     .health-detail-content p {
         max-width: 100%;
-        font-size: 1rem;
     }
     
     .health-about-image,
@@ -744,20 +661,8 @@
         gap: 1rem;
     }
     
-    .health-gallery-header h2 {
-        font-size: 1.8rem;
-    }
-    
-    .image-placeholder i {
-        font-size: 2.8rem;
-    }
-    
     .health-detail-stats {
         gap: 2rem;
-    }
-    
-    .detail-stat span {
-        font-size: 1.6rem;
     }
     
     /* Lightbox Mobile */
@@ -774,7 +679,6 @@
         right: 0.5rem;
         width: 40px;
         height: 40px;
-        font-size: 1.2rem;
     }
     
     .lightbox-image {
@@ -794,11 +698,9 @@
     .lightbox-nav-btn {
         width: 40px;
         height: 40px;
-        font-size: 1rem;
     }
     
     .lightbox-counter {
-        font-size: 0.85rem;
         min-width: 50px;
     }
 }
@@ -809,16 +711,8 @@
         padding: 2.5rem 0 1.5rem;
     }
     
-    .health-hero-content h1 {
-        font-size: 1.8rem;
-    }
-    
-    .health-hero-content p {
-        font-size: 1rem;
-    }
-    
-    .health-hero-desc {
-        font-size: 0.9rem !important;
+    .health-hero-content h1:hover {
+        transform: translateX(4px);
     }
     
     .health-stats-grid {
@@ -831,69 +725,23 @@
         padding: 1rem;
     }
     
-    .health-stat-number {
-        font-size: 2.2rem;
-    }
-    
-    .health-about-content h2,
-    .health-detail-content h2 {
-        font-size: 1.5rem;
-    }
-    
-    .health-about-content p,
-    .health-detail-content p {
-        font-size: 0.92rem;
-    }
-    
-    .health-list li {
-        font-size: 0.88rem;
-    }
-    
     .health-gallery-grid {
         grid-template-columns: 1fr 1fr;
         gap: 0.8rem;
-    }
-    
-    .health-gallery-header h2 {
-        font-size: 1.5rem;
     }
     
     .health-gallery-header {
         margin-bottom: 2rem;
     }
     
-    .gallery-item .image-placeholder i {
-        font-size: 2rem;
-    }
-    
-    .gallery-item .image-placeholder span {
-        font-size: 0.7rem;
-    }
-    
-    .image-placeholder i {
-        font-size: 2.2rem;
-    }
-    
-    .image-placeholder span {
-        font-size: 0.8rem;
-    }
-    
-    .health-tag {
-        font-size: 0.7rem;
-        padding: 0.2rem 0.8rem;
+    .health-about-content h2:hover,
+    .health-detail-content h2:hover {
+        transform: translateX(4px);
     }
     
     .health-detail-stats {
         gap: 1.5rem;
         flex-wrap: wrap;
-    }
-    
-    .detail-stat span {
-        font-size: 1.4rem;
-    }
-    
-    .detail-stat label {
-        font-size: 0.75rem;
     }
     
     /* Lightbox Mobile Small */
@@ -910,7 +758,6 @@
         right: 0.3rem;
         width: 34px;
         height: 34px;
-        font-size: 1rem;
     }
     
     .lightbox-image {
@@ -931,19 +778,9 @@
     .lightbox-nav-btn {
         width: 34px;
         height: 34px;
-        font-size: 0.8rem;
     }
     
     .lightbox-counter {
-        font-size: 0.75rem;
         min-width: 40px;
-    }
-    
-    .lightbox-image i {
-        font-size: 2.5rem;
-    }
-    
-    .lightbox-image span {
-        font-size: 0.85rem;
     }
 }

@@ -13,7 +13,6 @@
 }
 
 .mission-hero-content h1 {
-    font-size: 3.5rem;
     font-weight: 800;
     color: var(--charcoal);
     line-height: 1.15;
@@ -27,7 +26,6 @@
 }
 
 .mission-hero-content p {
-    font-size: 1.2rem;
     color: var(--gray-600);
     line-height: 1.7;
     max-width: 550px;
@@ -74,7 +72,6 @@
 }
 
 .stat-number {
-    font-size: 3rem;
     font-weight: 800;
     color: var(--charcoal);
     line-height: 1.2;
@@ -88,7 +85,6 @@
 }
 
 .stat-label {
-    font-size: 1rem;
     color: var(--gray-400);
     font-weight: 500;
     margin-top: 0.3rem;
@@ -124,7 +120,6 @@
     display: inline-block;
     color: var(--crimson);
     font-weight: 700;
-    font-size: 0.75rem;
     letter-spacing: 2.5px;
     text-transform: uppercase;
     padding: 0.3rem 1rem;
@@ -138,7 +133,6 @@
 }
 
 .mission-about-content h2 {
-    font-size: 2.6rem;
     font-weight: 800;
     color: var(--charcoal);
     line-height: 1.2;
@@ -152,7 +146,6 @@
 }
 
 .mission-about-content p {
-    font-size: 1.05rem;
     color: var(--gray-600);
     line-height: 1.8;
     max-width: 540px;
@@ -200,7 +193,6 @@
 }
 
 .image-placeholder i {
-    font-size: 3.5rem;
     opacity: 0.5;
     transition: transform 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1),
                 opacity 0.4s ease;
@@ -212,7 +204,6 @@
 }
 
 .image-placeholder span {
-    font-size: 0.95rem;
     font-weight: 500;
     color: var(--gray-400);
     transition: color 0.3s ease;
@@ -254,10 +245,6 @@
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
 }
 
-.mission-detail-image .image-placeholder i {
-    font-size: 3.5rem;
-}
-
 .mission-detail-image:hover .image-placeholder i {
     transform: scale(1.12) rotate(4deg);
     opacity: 0.7;
@@ -276,7 +263,6 @@
 .mission-detail-content .mission-tag {
     color: var(--crimson);
     font-weight: 700;
-    font-size: 0.75rem;
     letter-spacing: 2.5px;
     text-transform: uppercase;
     padding: 0.3rem 1rem;
@@ -289,7 +275,6 @@
 }
 
 .mission-detail-content h2 {
-    font-size: 2.6rem;
     font-weight: 800;
     color: var(--charcoal);
     line-height: 1.2;
@@ -303,7 +288,6 @@
 }
 
 .mission-detail-content p {
-    font-size: 1.05rem;
     color: var(--gray-600);
     line-height: 1.8;
     max-width: 540px;
@@ -328,7 +312,6 @@
     display: flex;
     align-items: flex-start;
     gap: 0.8rem;
-    font-size: 0.98rem;
     color: var(--gray-600);
     line-height: 1.5;
     padding: 0.5rem 0.5rem 0.5rem 0;
@@ -347,7 +330,6 @@
 
 .mission-list li i {
     color: var(--crimson);
-    font-size: 1.1rem;
     margin-top: 0.2rem;
     flex-shrink: 0;
     opacity: 0.8;
@@ -365,10 +347,6 @@
 
 /* Large Tablet */
 @media (max-width: 1200px) {
-    .mission-hero-content h1 {
-        font-size: 3rem;
-    }
-    
     .stats-grid {
         max-width: 100%;
     }
@@ -380,40 +358,15 @@
         padding: 4rem 0 3rem;
     }
     
-    .mission-hero-content h1 {
-        font-size: 2.6rem;
-    }
-    
-    .mission-hero-content p {
-        font-size: 1.1rem;
-    }
-    
     .mission-about-grid,
     .mission-detail-grid {
         gap: 3rem;
-    }
-    
-    .mission-about-content h2,
-    .mission-detail-content h2 {
-        font-size: 2.2rem;
-    }
-    
-    .stat-number {
-        font-size: 2.6rem;
     }
 }
 
 @media (max-width: 768px) {
     .mission-hero {
         padding: 3rem 0 2rem;
-    }
-    
-    .mission-hero-content h1 {
-        font-size: 2.2rem;
-    }
-    
-    .mission-hero-content p {
-        font-size: 1rem;
     }
     
     .stats-grid {
@@ -430,14 +383,6 @@
         transform: translateY(-6px) scale(1.02);
     }
     
-    .stat-number {
-        font-size: 2.2rem;
-    }
-    
-    .stat-label {
-        font-size: 0.9rem;
-    }
-    
     .mission-about,
     .mission-detail {
         padding: 3rem 0;
@@ -448,44 +393,32 @@
         gap: 2.5rem;
     }
     
-    .mission-about-content h2 {
-        font-size: 1.8rem;
-    }
-    
     .mission-about-content p {
         max-width: 100%;
-        font-size: 1rem;
     }
     
+    /* ===== VISION SECTION - IMAGE BELOW TEXT ON MOBILE ===== */
     .mission-detail-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
     }
     
-    .mission-detail-grid .mission-detail-image {
-        order: 0;
-    }
-    
+    /* Move image below text on mobile */
     .mission-detail-grid .mission-detail-content {
         order: 1;
     }
     
-    .mission-detail-content h2 {
-        font-size: 1.8rem;
+    .mission-detail-grid .mission-detail-image {
+        order: 2;
     }
     
     .mission-detail-content p {
         max-width: 100%;
-        font-size: 1rem;
     }
     
     .mission-about-image,
     .mission-detail-image {
         aspect-ratio: 16/10;
-    }
-    
-    .image-placeholder i {
-        font-size: 2.8rem;
     }
     
     .mission-about-image:hover,
@@ -500,16 +433,8 @@
         padding: 2.5rem 0 1.5rem;
     }
     
-    .mission-hero-content h1 {
-        font-size: 1.8rem;
-    }
-    
     .mission-hero-content h1:hover {
         transform: translateX(4px);
-    }
-    
-    .mission-hero-content p {
-        font-size: 0.95rem;
     }
     
     .stats-grid {
@@ -526,68 +451,24 @@
         transform: translateY(-4px) scale(1.02);
     }
     
-    .stat-number {
-        font-size: 1.8rem;
-    }
-    
-    .stat-label {
-        font-size: 0.8rem;
-    }
-    
-    .mission-about-content h2,
-    .mission-detail-content h2 {
-        font-size: 1.5rem;
-    }
-    
     .mission-about-content h2:hover,
     .mission-detail-content h2:hover {
         transform: translateX(4px);
     }
     
-    .mission-about-content p,
-    .mission-detail-content p {
-        font-size: 0.92rem;
-    }
-    
     .mission-list li {
-        font-size: 0.88rem;
         padding: 0.4rem 0.4rem 0.4rem 0;
     }
     
     .mission-list li:hover {
         transform: translateX(4px);
     }
-    
-    .image-placeholder i {
-        font-size: 2.2rem;
-    }
-    
-    .image-placeholder span {
-        font-size: 0.8rem;
-    }
-    
-    .mission-tag {
-        font-size: 0.7rem;
-        padding: 0.2rem 0.8rem;
-    }
 }
 
 /* Small Mobile */
 @media (max-width: 360px) {
-    .mission-hero-content h1 {
-        font-size: 1.5rem;
-    }
-    
     .stats-grid {
         gap: 0.8rem;
-    }
-    
-    .stat-number {
-        font-size: 1.5rem;
-    }
-    
-    .stat-label {
-        font-size: 0.7rem;
     }
     
     .stat-item {

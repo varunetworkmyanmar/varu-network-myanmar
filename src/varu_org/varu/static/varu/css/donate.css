@@ -16,14 +16,12 @@
     display: inline-block;
     color: var(--crimson);
     font-weight: 600;
-    font-size: 0.75rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
 }
 
 .donate-hero-content h1 {
-    font-size: 3.2rem;
     font-weight: 800;
     color: var(--charcoal);
     line-height: 1.15;
@@ -32,7 +30,6 @@
 }
 
 .donate-hero-content p {
-    font-size: 1.15rem;
     color: var(--gray-600);
     line-height: 1.7;
     max-width: 550px;
@@ -65,19 +62,16 @@
 }
 
 .message-icon i {
-    font-size: 2rem;
     color: var(--crimson);
 }
 
 .message-box h2 {
-    font-size: 2rem;
     font-weight: 700;
     color: var(--charcoal);
     margin-bottom: 1rem;
 }
 
 .message-box p {
-    font-size: 1rem;
     color: var(--gray-600);
     line-height: 1.7;
     max-width: 550px;
@@ -128,18 +122,15 @@
 }
 
 .team-avatar i {
-    font-size: 1.8rem;
     color: var(--white);
 }
 
 .team-card h3 {
-    font-size: 1.1rem;
     font-weight: 700;
     color: var(--charcoal);
 }
 
 .team-role {
-    font-size: 0.8rem;
     color: var(--gray-400);
     margin-bottom: 1rem;
 }
@@ -148,7 +139,6 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 0.85rem;
     color: var(--gray-600);
     text-decoration: none;
     padding: 0.3rem 0;
@@ -157,7 +147,6 @@
 
 .team-link i {
     color: var(--crimson);
-    font-size: 0.8rem;
 }
 
 .team-link:hover {
@@ -182,14 +171,12 @@
 }
 
 .transparency-box h2 {
-    font-size: 2.2rem;
     font-weight: 700;
     color: var(--charcoal);
     margin-bottom: 0.8rem;
 }
 
 .transparency-box p {
-    font-size: 1rem;
     color: var(--gray-600);
     margin-bottom: 2rem;
 }
@@ -214,17 +201,15 @@
 
 .promise-item i {
     color: var(--crimson);
-    font-size: 1rem;
     flex-shrink: 0;
 }
 
 .promise-item span {
-    font-size: 0.9rem;
     color: var(--gray-600);
 }
 
 /* ========================================
-   RESPONSIVE
+   RESPONSIVE - LAYOUT ONLY (NO FONT SIZES)
    ======================================== */
 
 @media (max-width: 768px) {
@@ -232,29 +217,13 @@
         padding: 3rem 0 2rem;
     }
     
-    .donate-hero-content h1 {
-        font-size: 2.4rem;
-    }
-    
-    .donate-hero-content p {
-        font-size: 1rem;
-    }
-    
     .message-box {
         padding: 2rem 1.5rem;
-    }
-    
-    .message-box h2 {
-        font-size: 1.6rem;
     }
     
     .team-grid {
         grid-template-columns: 1fr;
         max-width: 400px;
-    }
-    
-    .transparency-box h2 {
-        font-size: 1.8rem;
     }
     
     .promise-list {
@@ -264,24 +233,12 @@
 }
 
 @media (max-width: 480px) {
-    .donate-hero-content h1 {
-        font-size: 1.8rem;
-    }
-    
-    .donate-hero-content p {
-        font-size: 0.95rem;
+    .donate-hero {
+        padding: 2.5rem 0 1.5rem;
     }
     
     .message-box {
         padding: 1.5rem 1rem;
-    }
-    
-    .message-box h2 {
-        font-size: 1.3rem;
-    }
-    
-    .message-box p {
-        font-size: 0.9rem;
     }
     
     .message-icon {
@@ -289,31 +246,11 @@
         height: 52px;
     }
     
-    .message-icon i {
-        font-size: 1.6rem;
-    }
-    
     .team-card {
         padding: 1.5rem;
     }
     
-    .transparency-box h2 {
-        font-size: 1.5rem;
-    }
-    
-    .transparency-box p {
-        font-size: 0.95rem;
-    }
-    
     .promise-item {
         padding: 0.5rem 0.8rem;
-    }
-    
-    .promise-item span {
-        font-size: 0.85rem;
-    }
-    
-    .donate-tag {
-        font-size: 0.7rem;
     }
 }

@@ -4,15 +4,15 @@
   position: relative;
   background: var(--gray-800);
   overflow: hidden;
-  height: 520px;
+  height: 560px;
 }
 
 @media (max-width: 768px) { 
-  .hero-carousel { height: 320px; } 
+  .hero-carousel { height: 380px; } 
 }
 
 @media (max-width: 480px) { 
-  .hero-carousel { height: 240px; } 
+  .hero-carousel { height: 300px; } 
 }
 
 .hero-track {
@@ -39,47 +39,41 @@
 .slide-content {
   text-align: center;
   color: var(--white);
-  padding: 2rem;
+  padding: 2.5rem;
 }
 
 .slide-content .icon-wrap {
-  width: 72px; 
-  height: 72px; 
+  width: 90px; 
+  height: 90px; 
   border-radius: 50%;
   background: rgba(255,255,255,0.15);
   display: flex; 
   align-items: center; 
   justify-content: center;
-  margin: 0 auto 1rem; 
-  font-size: 32px; 
+  margin: 0 auto 1.2rem; 
+  font-size: 3.2rem; 
   color: var(--white);
 }
 
 .slide-content h2 { 
-  font-size: 1.6rem; 
-  font-weight: 600; 
-  margin-bottom: 0.5rem; 
+  font-weight: 700; 
+  margin-bottom: 0.6rem; 
+  color: var(--white);
 }
 
 .slide-content p { 
-  font-size: 0.95rem; 
-  opacity: 0.75; 
-  max-width: 340px; 
+  opacity: 0.85; 
+  max-width: 400px; 
   margin: 0 auto; 
-  line-height: 1.6; 
+  line-height: 1.7; 
+  color: var(--white);
 }
 
 @media (max-width: 480px) {
   .slide-content .icon-wrap { 
-    width: 52px; 
-    height: 52px; 
-    font-size: 22px; 
-  }
-  .slide-content h2 { 
-    font-size: 1.1rem; 
-  }
-  .slide-content p { 
-    font-size: 0.82rem; 
+    width: 55px; 
+    height: 55px; 
+    font-size: 1.8rem; 
   }
 }
 
@@ -248,14 +242,12 @@
   display: flex; 
   align-items: center; 
   justify-content: center;
-  min-width: 36px; 
-  height: 36px; 
-  padding: 0 10px;
+  min-width: 40px; 
+  height: 40px; 
+  padding: 0 12px;
   border: 1px solid var(--gray-300);
   border-radius: 8px;
-  color: var(--gray-800);
   text-decoration: none;
-  font-size: 13px; 
   font-weight: 500;
   background: var(--white);
   cursor: pointer;
@@ -292,7 +284,6 @@
   white-space: nowrap;
 }
 
-/* Section CSS */
 /* ========================================
    ABOUT SECTION
    ======================================== */
@@ -319,17 +310,15 @@
     display: inline-block;
     color: var(--crimson);
     font-weight: 700;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
     text-transform: uppercase;
     background: rgba(158, 42, 47, 0.08);
-    padding: 0.3rem 1rem;
+    padding: 0.4rem 1.2rem;
     border-radius: 50px;
     width: fit-content;
 }
 
 .about-title {
-    font-size: 2.5rem;
     font-weight: 800;
     color: var(--charcoal);
     line-height: 1.2;
@@ -341,8 +330,7 @@
 }
 
 .about-desc {
-    font-size: 1rem;
-    color: var(--gray-600);
+    color: var(--gray-700);
     line-height: 1.8;
     margin: 0;
     max-width: 540px;
@@ -366,15 +354,13 @@
 }
 
 .stat-number {
-    font-size: 2rem;
     font-weight: 800;
     color: var(--crimson);
     line-height: 1.2;
 }
 
 .stat-label {
-    font-size: 0.8rem;
-    color: var(--gray-600);
+    color: var(--gray-700);
     font-weight: 500;
 }
 
@@ -385,11 +371,10 @@
     gap: 0.6rem;
     background: var(--crimson);
     color: var(--white);
-    padding: 0.8rem 2rem;
+    padding: 0.9rem 2.2rem;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.95rem;
     transition: var(--transition-standard);
     box-shadow: 0 4px 16px rgba(158, 42, 47, 0.25);
     width: fit-content;
@@ -402,7 +387,6 @@
 }
 
 .about-btn i {
-    font-size: 0.9rem;
     transition: transform 0.3s ease;
 }
 
@@ -435,12 +419,10 @@
 }
 
 .about-image-placeholder i {
-    font-size: 4rem;
     opacity: 0.8;
 }
 
 .about-image-placeholder span {
-    font-size: 1.2rem;
     font-weight: 600;
     opacity: 0.9;
 }
@@ -466,11 +448,9 @@
 
 .overlay-card i {
     color: var(--crimson);
-    font-size: 1.4rem;
 }
 
 .overlay-card span {
-    font-size: 0.85rem;
     font-weight: 600;
     color: var(--charcoal);
     line-height: 1.3;
@@ -486,16 +466,8 @@
         gap: 3rem;
     }
     
-    .about-title {
-        font-size: 2.2rem;
-    }
-    
     .about-stats {
         gap: 1.8rem;
-    }
-    
-    .stat-number {
-        font-size: 1.8rem;
     }
 }
 
@@ -520,20 +492,11 @@
         max-width: 100%;
     }
     
-    .about-image-placeholder i {
-        font-size: 3rem;
-    }
-    
-    .about-image-placeholder span {
-        font-size: 1rem;
-    }
-    
-    .about-title {
-        font-size: 1.8rem;
+    .about-title br {
+        display: block;
     }
     
     .about-desc {
-        font-size: 0.95rem;
         max-width: 100%;
     }
     
@@ -542,23 +505,11 @@
         flex-wrap: wrap;
     }
     
-    .stat-number {
-        font-size: 1.6rem;
-    }
-    
     .overlay-card {
         padding: 1rem 1.4rem;
         min-width: 160px;
         bottom: -15px;
         right: -10px;
-    }
-    
-    .overlay-card i {
-        font-size: 1.2rem;
-    }
-    
-    .overlay-card span {
-        font-size: 0.8rem;
     }
 }
 
@@ -572,16 +523,8 @@
         gap: 2rem;
     }
     
-    .about-title {
-        font-size: 1.5rem;
-    }
-    
     .about-title br {
         display: none;
-    }
-    
-    .about-desc {
-        font-size: 0.9rem;
     }
     
     .about-stats {
@@ -593,31 +536,14 @@
         min-width: 80px;
     }
     
-    .stat-number {
-        font-size: 1.4rem;
-    }
-    
-    .stat-label {
-        font-size: 0.7rem;
-    }
-    
     .about-btn {
         width: 100%;
         justify-content: center;
-        font-size: 0.9rem;
-        padding: 0.7rem 1.5rem;
+        padding: 0.8rem 1.5rem;
     }
     
     .about-image {
         aspect-ratio: 16/12;
-    }
-    
-    .about-image-placeholder i {
-        font-size: 2.5rem;
-    }
-    
-    .about-image-placeholder span {
-        font-size: 0.9rem;
     }
     
     .about-image-overlay {
@@ -634,12 +560,5 @@
         bottom: auto;
         right: auto;
     }
-    
-    .overlay-card i {
-        font-size: 1rem;
-    }
-    
-    .overlay-card span {
-        font-size: 0.75rem;
-    }
 }
+
