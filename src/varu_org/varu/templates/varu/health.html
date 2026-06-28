@@ -5,31 +5,17 @@
 {% endblock %}
 
 {% block content %}
-<!-- ===== HERO SECTION ===== -->
-<section class="health-hero">
-    <div class="container">
-        <div class="health-hero-content">
-            <span class="health-tag">Healthcare</span>
-            <h2 class="about-title">Your Support is Powerful.</h2>
-            <p>We Work Together</p>
-            <p class="health-hero-desc">Upstream seeks and builds relationships with individuals who are making a difference in their communities. By finding those who are already creating change, we are deepening impact instead of duplicating it.</p>
-        </div>
-    </div>
-</section>
+
 <!-- ===== ABOUT SECTION ===== -->
 <section class="health-about">
     <div class="container">
         <div class="health-about-grid">
-            <div class="health-about-image">
-                <div class="image-placeholder">
-                    <i class="fas fa-heartbeat"></i>
-                    <span>Healthcare in Action</span>
-                </div>
-            </div>
             <div class="health-about-content">
                 <span class="health-tag">Our Mission</span>
-                <h2 class="about-title">Bridging the Healthcare Gap</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris.</p>
+                  <p style="color:#000;font-weight:900;font-size:1.2rem;line-height:1.5;font-family:'Segoe UI',Arial,sans-serif;letter-spacing:0.01em;">
+               "Health is a human right, not a privilege."
+              </p> <br>
+                <p>Access to quality healthcare remains a critical challenge for communities along the Varu River. Geographic isolation, limited infrastructure, and ongoing conflict have made it difficult for families to receive even basic medical care.</p>
                 <ul class="health-list">
                     <li><i class="fas fa-check-circle"></i> Accessible healthcare for all communities</li>
                     <li><i class="fas fa-check-circle"></i> Mobile health clinics reaching remote areas</li>
@@ -40,116 +26,82 @@
     </div>
 </section>
 
-<!-- ===== DETAIL SECTION ===== -->
-<section class="health-detail">
+<!-- ===== TRUE STORIES SECTION ===== -->
+<section class="health-stories">
     <div class="container">
-        <div class="health-detail-grid">
-            <div class="health-detail-content">
-                <span class="health-tag">Our Impact</span>
-                <h2 class="about-title">Healthcare for Everyone</h2>
-                <p>Vivamus eiusmod nec ullamcorper sit amet massa nullam eget felis et netus et malesuada fames urna nec tincidunt proin elementum feugiat mauris aliquam eleifend mi in nulla posuere sollicitudin pretium.</p>
-                <div class="health-detail-stats">
-                    <div class="detail-stat">
-                        <span>15+</span>
-                        <label>Mobile Clinics</label>
-                    </div>
-                    <div class="detail-stat">
-                        <span>50+</span>
-                        <label>Partner Organizations</label>
+        <div class="health-stories-header">
+            <span class="health-tag">True Stories</span>
+            <h2>Real People, Real Impact</h2>
+            <p>Meet the individuals whose lives have been transformed through access to healthcare. Each story represents a community strengthened, a family healed, and a future renewed.</p>
+        </div>
+        <div class="health-stories-grid">
+            <!-- Story Card 1 -->
+            <a href="#" class="story-card">
+                <div class="story-card-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-user-md"></i>
+                        <span>Dr. Aung's Story</span>
                     </div>
                 </div>
-            </div>
-            <div class="health-detail-image">
-                <div class="image-placeholder">
-                    <i class="fas fa-stethoscope"></i>
-                    <span>Medical Services</span>
+                <div class="story-card-content">
+                    <span class="story-tag">Healthcare Worker</span>
+                    <h3>Bringing Medicine to the Mountain</h3>
+                    <p>Dr. Aung travels 6 hours each week to reach remote villages that have never had a doctor.</p>
+                    <span class="story-read-more">Read Full Story →</span>
                 </div>
-            </div>
+            </a>
+
+            <!-- Story Card 2 -->
+            <a href="#" class="story-card">
+                <div class="story-card-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-child"></i>
+                        <span>Mya's Story</span>
+                    </div>
+                </div>
+                <div class="story-card-content">
+                    <span class="story-tag">Patient</span>
+                    <h3>A Second Chance at Life</h3>
+                    <p>After years without medical care, Mya received life-saving treatment through our mobile clinic.</p>
+                    <span class="story-read-more">Read Full Story →</span>
+                </div>
+            </a>
+
+            <!-- Story Card 3 -->
+            <a href="#" class="story-card">
+                <div class="story-card-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <span>Community Health</span>
+                    </div>
+                </div>
+                <div class="story-card-content">
+                    <span class="story-tag">Community Impact</span>
+                    <h3>Healing a Whole Village</h3>
+                    <p>When one village gained access to healthcare, the entire community's health and hope improved.</p>
+                    <span class="story-read-more">Read Full Story →</span>
+                </div>
+            </a>
+
+            <!-- Story Card 4 -->
+            <a href="#" class="story-card">
+                <div class="story-card-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-stethoscope"></i>
+                        <span>Mobile Clinic</span>
+                    </div>
+                </div>
+                <div class="story-card-content">
+                    <span class="story-tag">Innovation</span>
+                    <h3>The Clinic That Comes to You</h3>
+                    <p>How a mobile health unit is changing the way remote communities receive medical care.</p>
+                    <span class="story-read-more">Read Full Story →</span>
+                </div>
+            </a>
         </div>
     </div>
 </section>
 
-<!-- ===== GALLERY SECTION ===== -->
-<section class="health-gallery">
-    <div class="container">
-        <div class="health-gallery-header">
-            <span class="health-tag">Gallery</span>
-            <h2 class="about-title">Moments of Impact</h2>
-        </div>
-        <div class="health-gallery-grid">
-            <div class="gallery-item" onclick="openLightbox(0)">
-                <div class="image-placeholder">
-                    <i class="fas fa-image"></i>
-                    <span>Click to view</span>
-                </div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(1)">
-                <div class="image-placeholder">
-                    <i class="fas fa-image"></i>
-                    <span>Click to view</span>
-                </div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(2)">
-                <div class="image-placeholder">
-                    <i class="fas fa-image"></i>
-                    <span>Click to view</span>
-                </div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(3)">
-                <div class="image-placeholder">
-                    <i class="fas fa-image"></i>
-                    <span>Click to view</span>
-                </div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(4)">
-                <div class="image-placeholder">
-                    <i class="fas fa-image"></i>
-                    <span>Click to view</span>
-                </div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(5)">
-                <div class="image-placeholder">
-                    <i class="fas fa-image"></i>
-                    <span>Click to view</span>
-                </div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(6)">
-                <div class="image-placeholder">
-                    <i class="fas fa-image"></i>
-                    <span>Click to view</span>
-                </div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(7)">
-                <div class="image-placeholder">
-                    <i class="fas fa-image"></i>
-                    <span>Click to view</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== LIGHTBOX ===== -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <div class="lightbox-content" onclick="event.stopPropagation()">
-        <button class="lightbox-close" onclick="closeLightbox()">
-            <i class="fas fa-times"></i>
-        </button>
-        <div class="lightbox-image" id="lightboxImage">
-            <i class="fas fa-image"></i>
-            <span>Image Preview</span>
-        </div>
-        <div class="lightbox-nav">
-            <button class="lightbox-nav-btn prev" onclick="prevImage()">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <span class="lightbox-counter" id="lightboxCounter">1 / 8</span>
-            <button class="lightbox-nav-btn next" onclick="nextImage()">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-        </div>
-    </div>
-</div>
 {% endblock %}
 
 {% block extra_js %}
