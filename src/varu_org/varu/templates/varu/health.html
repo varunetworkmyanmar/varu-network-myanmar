@@ -1,55 +1,109 @@
 {% extends 'varu/base.html' %}
 {% load static %}
+
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'varu/css/health.css' %}">
 {% endblock %}
 
 {% block content %}
 
-<!-- ===== ABOUT SECTION ===== -->
+<!-- ===== HEALTHCARE ADVOCACY SECTION ===== -->
 <section class="health-about">
     <div class="container">
-        <div class="health-about-grid">
-            <div class="health-about-content">
-                <span class="health-tag">Our Mission</span>
-                  <p style="color:#000;font-weight:900;font-size:1.2rem;line-height:1.5;font-family:'Segoe UI',Arial,sans-serif;letter-spacing:0.01em;">
-               "Health is a human right, not a privilege."
-              </p> <br>
-                <p>Access to quality healthcare remains a critical challenge for communities along the Varu River. Geographic isolation, limited infrastructure, and ongoing conflict have made it difficult for families to receive even basic medical care.</p>
-                <ul class="health-list">
-                    <li><i class="fas fa-check-circle"></i> Accessible healthcare for all communities</li>
-                    <li><i class="fas fa-check-circle"></i> Mobile health clinics reaching remote areas</li>
-                    <li><i class="fas fa-check-circle"></i> Training local healthcare workers</li>
-                </ul>
+
+        <div class="health-about-content">
+
+            <h2 class="about-title">Healthcare Shouldn't Be Out of Reach</h2>
+            <br>
+
+
+            <p style="color:#000;font-weight:900;font-size:1.2rem;line-height:1.5;font-family:'Segoe UI',Arial,sans-serif;letter-spacing:0.01em;">
+                "Health is a human right, not a privilege."
+            </p> <br>
+
+            <p>
+                <strong>
+                    Access to healthcare remains one of the greatest challenges facing the communities along the Varu River.
+                    Geographic isolation, limited infrastructure, and the ongoing crisis in Myanmar have left thousands of
+                    people without timely access to essential medical services.
+                </strong>
+            </p><br>
+            <div class="health-section">
+                <span class="health-tag">Access to Healthcare Along the Varu River</span>
+
+                <p>
+                    For families living along the Varu River, reaching a hospital is often a journey measured not in kilometers,
+                    but in hope, endurance, and time.
+
+                    Geographic isolation, limited infrastructure, and the ongoing crisis in Myanmar have left thousands of people
+                    without access to timely medical care. When a child develops a high fever, a mother goes into labor, or an
+                    elderly person struggles to breathe, getting to a doctor is often the greatest challenge. Conditions that
+                    could be treated with timely care can quickly become life-threatening simply because help is too far away.
+                </p>
+            </div><br>
+
+            <div class="health-section">
+                <span class="health-tag">When Distance Becomes a Matter of Life and Death</span>
+
+                <p>
+                    For many villages, the nearest public hospital is located in <strong>Myaung Oo, Rakhine State</strong>. Reaching it requires
+                    a journey of approximately [XX km] by boat along the Varu River—a journey that can take up to two days,
+                    depending on river levels and weather conditions.
+                   <br><br>
+                    Another option is <strong>Sami Hospital in Sami Town</strong>. But for many communities, there are no roads and no ambulances.
+                    Instead, seriously ill patients must be carried all the way to Sami Hospital by family members and volunteers.
+                    Walking across steep hills, muddy paths, and remote terrain, the journey can take an entire day. For someone
+                    suffering from severe illness, injury, or pregnancy complications, every hour can mean the difference between
+                    life and death.
+                </p>
+            </div><br>
+
+            <div class="health-section">
+                <span class="health-tag">When a Community Becomes an Ambulance</span>
+
+                <p>
+                    When someone falls critically ill, an entire village responds.
+
+                    Without emergency transport, neighbors gather together to carry patients on makeshift stretchers or hammocks.
+                    They take turns bearing the weight over difficult terrain, crossing rivers and forest paths while carrying
+                    food, water, and supplies for the long journey ahead.
+
+                    These acts of compassion reflect the remarkable strength and solidarity of these communities. Yet they also
+                    reveal a heartbreaking reality: no family should have to carry a loved one for hours—or even an entire day—
+                    simply to reach basic medical care.
+                </p>
+            </div><br>
+
+            <div class="health-section">
+                <span class="health-tag">Bringing Healthcare Closer</span>
+
+                <p>
+                    No one should lose their life because they live too far from a hospital.
+
+                    By bringing essential healthcare services closer to communities along the Varu River, we can reduce dangerous
+                    delays, treat illnesses before they become life-threatening, and ensure that families receive the care they
+                    need—when they need it most.
+
+                    Access to healthcare is more than a service. It is a lifeline, and every community deserves the chance to
+                    reach it.
+                </p>
             </div>
+
         </div>
+
     </div>
 </section>
 
 <!-- ===== TRUE STORIES SECTION ===== -->
 <section class="health-stories">
     <div class="container">
+
         <div class="health-stories-header">
             <span class="health-tag">True Stories</span>
-            <h2>Real People, Real Impact</h2>
-            <p>Meet the individuals whose lives have been transformed through access to healthcare. Each story represents a community strengthened, a family healed, and a future renewed.</p>
+            <h2> Lives Lost to Distance, Far from Immediate Medical Access</h2>
         </div>
+
         <div class="health-stories-grid">
-            <!-- Story Card 1 -->
-            <a href="#" class="story-card">
-                <div class="story-card-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-user-md"></i>
-                        <span>Dr. Aung's Story</span>
-                    </div>
-                </div>
-                <div class="story-card-content">
-                    <span class="story-tag">Healthcare Worker</span>
-                    <h3>Bringing Medicine to the Mountain</h3>
-                    <p>Dr. Aung travels 6 hours each week to reach remote villages that have never had a doctor.</p>
-                    <span class="story-read-more">Read Full Story →</span>
-                </div>
-            </a>
 
             <!-- Story Card 2 -->
             <a href="#" class="story-card">
@@ -59,6 +113,7 @@
                         <span>Mya's Story</span>
                     </div>
                 </div>
+
                 <div class="story-card-content">
                     <span class="story-tag">Patient</span>
                     <h3>A Second Chance at Life</h3>
@@ -66,23 +121,22 @@
                     <span class="story-read-more">Read Full Story →</span>
                 </div>
             </a>
-
-            <!-- Story Card 3 -->
+               <!-- Story Card 2 -->
             <a href="#" class="story-card">
                 <div class="story-card-image">
                     <div class="image-placeholder">
-                        <i class="fas fa-hand-holding-heart"></i>
-                        <span>Community Health</span>
+                        <i class="fas fa-child"></i>
+                        <span>Mya's Story</span>
                     </div>
                 </div>
+
                 <div class="story-card-content">
-                    <span class="story-tag">Community Impact</span>
-                    <h3>Healing a Whole Village</h3>
-                    <p>When one village gained access to healthcare, the entire community's health and hope improved.</p>
+                    <span class="story-tag">Patient</span>
+                    <h3>A Second Chance at Life</h3>
+                    <p>After years without medical care, Mya received life-saving treatment through our mobile clinic.</p>
                     <span class="story-read-more">Read Full Story →</span>
                 </div>
             </a>
-
             <!-- Story Card 4 -->
             <a href="#" class="story-card">
                 <div class="story-card-image">
@@ -91,6 +145,7 @@
                         <span>Mobile Clinic</span>
                     </div>
                 </div>
+
                 <div class="story-card-content">
                     <span class="story-tag">Innovation</span>
                     <h3>The Clinic That Comes to You</h3>
@@ -98,7 +153,9 @@
                     <span class="story-read-more">Read Full Story →</span>
                 </div>
             </a>
+
         </div>
+
     </div>
 </section>
 
