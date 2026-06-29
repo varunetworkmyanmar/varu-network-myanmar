@@ -23,6 +23,8 @@
     margin-bottom: 0.5rem;
     transition: transform 0.3s ease;
     cursor: default;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 .team-tag:hover {
@@ -36,6 +38,8 @@
     margin-bottom: 1.2rem;
     letter-spacing: -0.02em;
     transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    font-size: inherit;
+    font-family: inherit;
 }
 
 .team-hero-content h1:hover {
@@ -48,6 +52,8 @@
     max-width: 600px;
     font-weight: 400;
     transition: transform 0.4s ease;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 .team-hero-content p:hover {
@@ -71,11 +77,15 @@
     color: var(--charcoal);
     letter-spacing: -0.02em;
     margin-bottom: 0.8rem;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 .team-grid-header p {
     color: var(--gray-600);
     line-height: 1.7;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 .team-grid {
@@ -104,38 +114,20 @@
 
 .member-image {
     aspect-ratio: 1/1;
-    background: var(--gray-100);
     overflow: hidden;
+    background: var(--gray-100);
 }
 
-.member-image .image-placeholder {
+.member-photo {
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: var(--gray-50);
-    color: var(--gray-300);
-    transition: background 0.4s ease;
-}
-
-.team-member:hover .member-image .image-placeholder {
-    background: var(--gray-100);
-}
-
-.member-image .image-placeholder i {
-    opacity: 0.4;
+    object-fit: cover;
+    display: block;
     transition: transform 0.5s ease;
 }
 
-.team-member:hover .member-image .image-placeholder i {
-    transform: scale(1.1);
-}
-
-.member-image .image-placeholder span {
-    color: var(--gray-400);
-    margin-top: 0.3rem;
+.team-member:hover .member-photo {
+    transform: scale(1.05);
 }
 
 .member-info {
@@ -145,7 +137,20 @@
 .member-info h3 {
     font-weight: 700;
     color: var(--charcoal);
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.1rem;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.member-nickname {
+    display: block;
+    color: var(--gray-500);
+    font-weight: 400;
+    font-size: 0.85em; /* Relative to parent, inherits from base */
+    font-style: italic;
+    margin-bottom: 0.3rem;
+    font-family: inherit;
+    letter-spacing: 0.3px;
 }
 
 .member-role {
@@ -153,36 +158,16 @@
     color: var(--crimson);
     font-weight: 600;
     margin-bottom: 0.5rem;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 .member-info p {
     color: var(--gray-600);
     line-height: 1.6;
     margin-bottom: 1rem;
-}
-
-.member-social {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.member-social a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background: var(--gray-50);
-    color: var(--gray-600);
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.member-social a:hover {
-    background: var(--crimson);
-    color: var(--white);
-    transform: translateY(-2px);
+    font-size: inherit;
+    font-family: inherit;
 }
 
 /* ===== GRATITUDE SECTION ===== */
@@ -201,6 +186,8 @@
 
 .gratitude-content .team-tag {
     margin: 0 auto 0.5rem;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 .gratitude-content h2 {
@@ -208,6 +195,8 @@
     color: var(--charcoal);
     letter-spacing: -0.02em;
     margin-bottom: 1.2rem;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 .gratitude-content p {
@@ -215,6 +204,8 @@
     line-height: 1.8;
     max-width: 650px;
     margin: 0 auto 1rem;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 .gratitude-note {
@@ -225,6 +216,8 @@
     border-radius: 12px;
     border-left: 4px solid var(--crimson);
     margin-bottom: 2rem;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 .gratitude-icons {
@@ -253,11 +246,14 @@
 .gratitude-item i {
     color: var(--crimson);
     opacity: 0.8;
+    font-size: 2rem;
 }
 
 .gratitude-item span {
     color: var(--gray-600);
     font-weight: 500;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 /* ===== COLLABORATION SECTION ===== */
@@ -287,6 +283,8 @@
     line-height: 1.2;
     letter-spacing: -0.02em;
     transition: transform 0.4s ease;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 .collaboration-text h2:hover {
@@ -296,6 +294,8 @@
 .collaboration-text p {
     color: var(--gray-600);
     line-height: 1.8;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 .collaboration-list {
@@ -313,6 +313,8 @@
     gap: 0.8rem;
     color: var(--gray-600);
     transition: transform 0.3s ease;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 .collaboration-list li:hover {
@@ -357,6 +359,7 @@
 
 .collaboration-image .image-placeholder i {
     opacity: 0.5;
+    font-size: 3rem;
     transition: transform 0.5s ease;
 }
 
@@ -366,10 +369,12 @@
 
 .collaboration-image .image-placeholder span {
     color: var(--gray-400);
+    font-size: inherit;
+    font-family: inherit;
 }
 
 /* ========================================
-   RESPONSIVE - LAYOUT ONLY (NO FONT SIZES)
+   RESPONSIVE
    ======================================== */
 
 /* Tablet */
@@ -437,11 +442,6 @@
         padding: 1rem;
     }
     
-    .member-social a {
-        width: 30px;
-        height: 30px;
-    }
-    
     .gratitude-icons {
         max-width: 100%;
     }
@@ -457,4 +457,11 @@
     .collaboration-content {
         gap: 1.5rem;
     }
+    
+    .member-nickname {
+        font-size: 0.75em;
+    }
+}
+.member-photo.zarni-photo {
+    object-position: center 20%;
 }

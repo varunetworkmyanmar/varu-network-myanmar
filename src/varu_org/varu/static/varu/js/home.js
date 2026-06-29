@@ -7,6 +7,7 @@
   let current = 0;
   let autoTimer;
   let isPaused = false;
+  const SLIDE_INTERVAL = 13000; 
 
   function buildDots() {
     dotsWrap.innerHTML = '';
@@ -37,7 +38,7 @@
     progress.style.width = '0%';
     void progress.offsetWidth;
     requestAnimationFrame(() => {
-      progress.style.transition = 'width 3s linear';
+      progress.style.transition = `width ${SLIDE_INTERVAL}ms linear`;
       progress.style.width = '100%';
     });
   }
@@ -57,7 +58,7 @@
     if (!isPaused) {
       autoTimer = setInterval(() => {
         goTo(current + 1);
-      }, 3000);
+      }, SLIDE_INTERVAL);
     }
   }
 
@@ -82,7 +83,7 @@
       progress.style.width = currentWidth;
       void progress.offsetWidth;
       const remaining = 100 - parseFloat(currentWidth);
-      const remainingTime = (remaining / 100) * 3000;
+      const remainingTime = (remaining / 100) * SLIDE_INTERVAL;
       if (remaining > 0) {
         progress.style.transition = `width ${remainingTime}ms linear`;
         progress.style.width = '100%';
@@ -107,7 +108,7 @@
     clearTimeout(touchTimer);
     touchTimer = setTimeout(function() {
       resumeCarousel();
-    }, 3000);
+    }, SLIDE_INTERVAL);
   }, { passive: true });
 
   // ===== TOUCH SWIPE =====
@@ -135,7 +136,7 @@
     if (Math.abs(diff) > 40) {
       pauseCarousel();
       goTo(diff > 0 ? current + 1 : current - 1);
-      setTimeout(resumeCarousel, 3000);
+      setTimeout(resumeCarousel, SLIDE_INTERVAL);
     }
     touchX = null;
     touchStartY = null;
@@ -149,7 +150,7 @@
     prevBtn.addEventListener('click', () => {
       pauseCarousel();
       goTo(current - 1);
-      setTimeout(resumeCarousel, 3000);
+      setTimeout(resumeCarousel, SLIDE_INTERVAL);
     });
   }
   
@@ -157,7 +158,7 @@
     nextBtn.addEventListener('click', () => {
       pauseCarousel();
       goTo(current + 1);
-      setTimeout(resumeCarousel, 3000);
+      setTimeout(resumeCarousel, SLIDE_INTERVAL);
     });
   }
 
@@ -169,7 +170,7 @@
     pgPrev.querySelector('.page-link').addEventListener('click', () => {
       pauseCarousel();
       goTo(current - 1);
-      setTimeout(resumeCarousel, 3000);
+      setTimeout(resumeCarousel, SLIDE_INTERVAL);
     });
   }
   
@@ -177,7 +178,7 @@
     pgNext.querySelector('.page-link').addEventListener('click', () => {
       pauseCarousel();
       goTo(current + 1);
-      setTimeout(resumeCarousel, 3000);
+      setTimeout(resumeCarousel, SLIDE_INTERVAL);
     });
   }
   
@@ -188,11 +189,25 @@
         el.querySelector('.page-link').addEventListener('click', () => {
           pauseCarousel();
           goTo(idx - 1);
-          setTimeout(resumeCarousel, 3000);
+          setTimeout(resumeCarousel, SLIDE_INTERVAL);
         });
       })(i);
     }
   }
+
+  // ===== KEYBOARD NAVIGATION =====
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowLeft') {
+      pauseCarousel();
+      goTo(current - 1);
+      setTimeout(resumeCarousel, SLIDE_INTERVAL);
+    }
+    if (e.key === 'ArrowRight') {
+      pauseCarousel();
+      goTo(current + 1);
+      setTimeout(resumeCarousel, SLIDE_INTERVAL);
+    }
+  });
 
   // ===== INIT =====
   buildDots();

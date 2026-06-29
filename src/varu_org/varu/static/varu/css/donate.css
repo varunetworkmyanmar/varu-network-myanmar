@@ -19,6 +19,8 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 .donate-hero-content h1 {
@@ -27,12 +29,16 @@
     line-height: 1.15;
     margin-bottom: 1rem;
     letter-spacing: -0.02em;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 .donate-hero-content p {
     color: var(--gray-600);
     line-height: 1.7;
     max-width: 550px;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 /* ===== MESSAGE ===== */
@@ -63,12 +69,15 @@
 
 .message-icon i {
     color: var(--crimson);
+    font-size: 1.8rem;
 }
 
 .message-box h2 {
     font-weight: 700;
     color: var(--charcoal);
     margin-bottom: 1rem;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 .message-box p {
@@ -76,6 +85,8 @@
     line-height: 1.7;
     max-width: 550px;
     margin: 0 auto 0.8rem;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 .message-box p:last-of-type {
@@ -123,16 +134,33 @@
 
 .team-avatar i {
     color: var(--white);
+    font-size: 1.4rem;
 }
 
 .team-card h3 {
     font-weight: 700;
     color: var(--charcoal);
+    margin-bottom: 0.1rem;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.team-nickname {
+    display: block;
+    color: var(--gray-500);
+    font-weight: 400;
+    font-size: 0.85em;
+    font-style: italic;
+    margin-bottom: 0.3rem;
+    font-family: inherit;
+    letter-spacing: 0.3px;
 }
 
 .team-role {
     color: var(--gray-400);
     margin-bottom: 1rem;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 .team-link {
@@ -143,10 +171,13 @@
     text-decoration: none;
     padding: 0.3rem 0;
     transition: color 0.3s ease;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 .team-link i {
     color: var(--crimson);
+    font-size: 0.9rem;
 }
 
 .team-link:hover {
@@ -168,17 +199,23 @@
 
 .transparency-box .donate-tag {
     margin-bottom: 0.5rem;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 .transparency-box h2 {
     font-weight: 700;
     color: var(--charcoal);
     margin-bottom: 0.8rem;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 .transparency-box p {
     color: var(--gray-600);
     margin-bottom: 2rem;
+    font-size: inherit;
+    font-family: inherit;
 }
 
 .promise-list {
@@ -202,14 +239,17 @@
 .promise-item i {
     color: var(--crimson);
     flex-shrink: 0;
+    font-size: 0.9rem;
 }
 
 .promise-item span {
     color: var(--gray-600);
+    font-size: inherit;
+    font-family: inherit;
 }
 
 /* ========================================
-   RESPONSIVE - LAYOUT ONLY (NO FONT SIZES)
+   RESPONSIVE
    ======================================== */
 
 @media (max-width: 768px) {
@@ -246,11 +286,19 @@
         height: 52px;
     }
     
+    .message-icon i {
+        font-size: 1.4rem;
+    }
+    
     .team-card {
         padding: 1.5rem;
     }
     
     .promise-item {
         padding: 0.5rem 0.8rem;
+    }
+    
+    .team-nickname {
+        font-size: 0.75em;
     }
 }
