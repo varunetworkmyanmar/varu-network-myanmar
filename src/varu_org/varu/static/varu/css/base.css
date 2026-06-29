@@ -96,6 +96,7 @@ h1, h2, h3, h4, h5, h6,
     z-index: 1000;
     border-bottom: 3px solid var(--crimson);
     padding: 0.5rem 0;
+    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
 }
 
 .nav-container {
@@ -108,6 +109,7 @@ h1, h2, h3, h4, h5, h6,
     padding: 0.8rem 2rem;
     gap: 1rem;
     min-height: 90px;
+    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
 }
 
 /* ========== LOGO STYLES - BIGGER ========== */
@@ -171,6 +173,7 @@ h1, h2, h3, h4, h5, h6,
     letter-spacing: -0.5px;
     line-height: 1.2;
     font-family: 'Roboto', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
 }
 
 /* ===== DOUBLE LOGO DIVIDER - BIGGER ===== */
@@ -183,6 +186,7 @@ h1, h2, h3, h4, h5, h6,
     position: relative;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(158, 42, 47, 0.2);
+    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
 }
 
 .logo-divider::after {
@@ -195,6 +199,7 @@ h1, h2, h3, h4, h5, h6,
     background: var(--crimson-dark);
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(122, 31, 35, 0.25);
+    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
 }
 
 .logo-sub {
@@ -206,6 +211,7 @@ h1, h2, h3, h4, h5, h6,
     opacity: 0.9;
     margin-top: 12px;
     font-family: 'Roboto', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
 }
 
 /* ========== NAV LINKS ========== */
@@ -366,6 +372,84 @@ h1, h2, h3, h4, h5, h6,
 
 .nav-backdrop.active {
     display: block;
+}
+
+/* ========================================
+   SHRINK NAVBAR ON SCROLL (DESKTOP)
+   ======================================== */
+/* Shrunk state - applies when scrolling down on desktop */
+.navbar-shrunk {
+    padding: 0.1rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid var(--crimson);
+}
+
+/* Shrink container */
+.navbar-shrunk .nav-container {
+    min-height: 60px;
+    padding: 0.4rem 2rem;
+}
+
+/* For laptop screens - adjust left padding when shrunk */
+@media (min-width: 1025px) {
+    .navbar-shrunk .nav-container {
+        padding: 0.4rem 3rem 0.4rem 0.5rem;
+        min-height: 55px;
+    }
+}
+
+/* Shrink logo icon */
+.navbar-shrunk .logo-icon {
+    width: 60px;
+    height: 60px;
+}
+
+/* Shrink logo text */
+.navbar-shrunk .logo-main {
+    font-size: 2rem;
+}
+
+.navbar-shrunk .logo-divider {
+    height: 3px;
+    margin: 2px 0;
+}
+
+.navbar-shrunk .logo-divider::after {
+    height: 3px;
+    bottom: -7px;
+}
+
+.navbar-shrunk .logo-sub {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-top: 8px;
+}
+
+/* Shrink nav links */
+.navbar-shrunk .nav-link {
+    font-size: 0.95rem;
+    padding: 0.4rem 1rem;
+}
+
+/* Shrink donate button */
+.navbar-shrunk .donate-nav {
+    padding: 0.6rem 1.6rem !important;
+    font-size: 0.9rem !important;
+}
+
+/* Adjust dropdown when shrunk */
+.navbar-shrunk .dropdown-menu {
+    top: calc(100% + 5px);
+}
+
+.navbar-shrunk .dropdown-menu li a {
+    padding: 0.6rem 1.4rem;
+    font-size: 0.8rem;
+}
+
+/* Smooth transition for all navbar children */
+.navbar-shrunk * {
+    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
 }
 
 /* ========== RESPONSIVE - BIGGER LOGO ON ALL DEVICES ========== */
@@ -549,6 +633,39 @@ h1, h2, h3, h4, h5, h6,
         width: 65px;
         height: 65px;
     }
+    
+    /* Disable shrink on mobile */
+    .navbar-shrunk {
+        padding: 0.5rem 0;
+    }
+    
+    .navbar-shrunk .nav-container {
+        min-height: 70px;
+        padding: 0.6rem 1.2rem;
+    }
+    
+    .navbar-shrunk .logo-icon {
+        width: 65px;
+        height: 65px;
+    }
+    
+    .navbar-shrunk .logo-main {
+        font-size: 2rem;
+    }
+    
+    .navbar-shrunk .logo-sub {
+        font-size: 1.1rem;
+    }
+    
+    .navbar-shrunk .nav-link {
+        font-size: var(--font-medium);
+        padding: 0.8rem 0.5rem;
+    }
+    
+    .navbar-shrunk .donate-nav {
+        padding: 1rem !important;
+        font-size: var(--font-medium) !important;
+    }
 }
 
 /* Mobile Medium */
@@ -608,6 +725,19 @@ h1, h2, h3, h4, h5, h6,
     .menu-toggle {
         font-size: var(--font-xl);
     }
+    
+    .navbar-shrunk .logo-icon {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .navbar-shrunk .logo-main {
+        font-size: 1.8rem;
+    }
+    
+    .navbar-shrunk .logo-sub {
+        font-size: 1rem;
+    }
 }
 
 /* Mobile Small */
@@ -662,6 +792,19 @@ h1, h2, h3, h4, h5, h6,
     .donate-nav {
         font-size: 0.85rem !important;
         padding: 0.7rem !important;
+    }
+    
+    .navbar-shrunk .logo-icon {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .navbar-shrunk .logo-main {
+        font-size: 1.5rem;
+    }
+    
+    .navbar-shrunk .logo-sub {
+        font-size: 0.85rem;
     }
 }
 

@@ -4,6 +4,63 @@ document.addEventListener('DOMContentLoaded', function() {
     const navBackdrop = document.getElementById('navBackdrop');
     const whoItem = document.getElementById('whoDropdown');
     const priorityItem = document.getElementById('priorityDropdown');
+    const navbar = document.querySelector('.navbar');
+
+    // ========================================
+    // SHRINK NAVBAR ON SCROLL (DESKTOP ONLY)
+    // ========================================
+    let isShrunk = false;
+    const SHRINK_THRESHOLD = 80; // pixels to scroll before shrinking
+    const DESKTOP_BREAKPOINT = 901; // only apply on desktop
+
+    function shouldShrinkNavbar() {
+        return window.innerWidth >= DESKTOP_BREAKPOINT;
+    }
+
+    function handleNavbarScroll() {
+        if (!shouldShrinkNavbar()) {
+            // Reset to normal if on mobile/tablet
+            if (isShrunk) {
+                navbar.classList.remove('navbar-shrunk');
+                isShrunk = false;
+            }
+            return;
+        }
+
+        const currentScrollY = window.scrollY;
+        
+        // Only shrink if scrolled past threshold
+        if (currentScrollY > SHRINK_THRESHOLD && !isShrunk) {
+            navbar.classList.add('navbar-shrunk');
+            isShrunk = true;
+        } else if (currentScrollY <= SHRINK_THRESHOLD && isShrunk) {
+            navbar.classList.remove('navbar-shrunk');
+            isShrunk = false;
+        }
+    }
+
+    // Throttled scroll listener for performance
+    let scrollTimeout;
+    window.addEventListener('scroll', function() {
+        if (scrollTimeout) {
+            cancelAnimationFrame(scrollTimeout);
+        }
+        scrollTimeout = requestAnimationFrame(function() {
+            handleNavbarScroll();
+        });
+    }, { passive: true });
+
+    // Handle window resize - reset if switching to mobile
+    window.addEventListener('resize', function() {
+        if (!shouldShrinkNavbar() && isShrunk) {
+            navbar.classList.remove('navbar-shrunk');
+            isShrunk = false;
+        }
+    });
+
+    // ========================================
+    // EXISTING MOBILE MENU CODE
+    // ========================================
 
     function isMobile() {
         return window.innerWidth <= 900;
@@ -108,4 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Initial check in case page loads already scrolled
+    setTimeout(handleNavbarScroll, 100);
 });
