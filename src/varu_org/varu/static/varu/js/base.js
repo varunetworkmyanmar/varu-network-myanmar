@@ -10,52 +10,109 @@ document.addEventListener('DOMContentLoaded', function() {
     // SHRINK NAVBAR ON SCROLL (DESKTOP ONLY)
     // ========================================
     let isShrunk = false;
+    let isTransitioning = false;
+    let lastScrollY = window.scrollY;
     const SHRINK_THRESHOLD = 80; // pixels to scroll before shrinking
     const DESKTOP_BREAKPOINT = 901; // only apply on desktop
+    const TRANSITION_DURATION = 350; // match CSS transition duration
 
     function shouldShrinkNavbar() {
         return window.innerWidth >= DESKTOP_BREAKPOINT;
     }
 
-    function handleNavbarScroll() {
-        if (!shouldShrinkNavbar()) {
-            // Reset to normal if on mobile/tablet
-            if (isShrunk) {
-                navbar.classList.remove('navbar-shrunk');
-                isShrunk = false;
-            }
-            return;
-        }
-
-        const currentScrollY = window.scrollY;
+    function applyShrinkState(shrink) {
+        if (isTransitioning) return;
         
-        // Only shrink if scrolled past threshold
-        if (currentScrollY > SHRINK_THRESHOLD && !isShrunk) {
+        if (shrink && !isShrunk) {
+            isTransitioning = true;
             navbar.classList.add('navbar-shrunk');
             isShrunk = true;
-        } else if (currentScrollY <= SHRINK_THRESHOLD && isShrunk) {
+            setTimeout(() => {
+                isTransitioning = false;
+            }, TRANSITION_DURATION);
+        } else if (!shrink && isShrunk) {
+            isTransitioning = true;
             navbar.classList.remove('navbar-shrunk');
             isShrunk = false;
+            setTimeout(() => {
+                isTransitioning = false;
+            }, TRANSITION_DURATION);
         }
     }
 
-    // Throttled scroll listener for performance
-    let scrollTimeout;
-    window.addEventListener('scroll', function() {
-        if (scrollTimeout) {
-            cancelAnimationFrame(scrollTimeout);
+    function handleNavbarScroll() {
+        if (!shouldShrinkNavbar()) {
+            // Reset to normal if on mobile/tablet
+            applyShrinkState(false);
+            return;
         }
-        scrollTimeout = requestAnimationFrame(function() {
-            handleNavbarScroll();
-        });
+
+        const scrollY = window.scrollY;
+        
+        // Only update if scroll position has changed significantly
+        if (Math.abs(scrollY - lastScrollY) < 2) return;
+        lastScrollY = scrollY;
+        
+        // Check if we should shrink or expand
+        if (scrollY > SHRINK_THRESHOLD) {
+            applyShrinkState(true);
+        } else {
+            applyShrinkState(false);
+        }
+    }
+
+    // ========================================
+    // SCROLL HANDLING WITH RAF THROTTLING
+    // ========================================
+    let ticking = false;
+    
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                handleNavbarScroll();
+                ticking = false;
+            });
+            ticking = true;
+        }
     }, { passive: true });
 
-    // Handle window resize - reset if switching to mobile
+    // ========================================
+    // HANDLE WINDOW RESIZE
+    // ========================================
+    let resizeTimeout;
     window.addEventListener('resize', function() {
-        if (!shouldShrinkNavbar() && isShrunk) {
-            navbar.classList.remove('navbar-shrunk');
-            isShrunk = false;
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(function() {
+            if (!shouldShrinkNavbar() && isShrunk) {
+                applyShrinkState(false);
+            }
+            // Update scroll position after resize
+            lastScrollY = window.scrollY;
+        }, 200);
+    });
+
+    // ========================================
+    // PREVENT NAVBAR INTERFERENCE WITH SCROLL
+    // ========================================
+    let mouseInNavbar = false;
+    let mouseTimeout;
+
+    navbar.addEventListener('mouseenter', function() {
+        mouseInNavbar = true;
+        // Clear any pending scroll updates
+        if (mouseTimeout) {
+            clearTimeout(mouseTimeout);
         }
+    });
+
+    navbar.addEventListener('mouseleave', function() {
+        mouseInNavbar = false;
+        // Re-enable scroll handling after a short delay
+        mouseTimeout = setTimeout(() => {
+            if (!mouseInNavbar) {
+                handleNavbarScroll();
+            }
+        }, 100);
     });
 
     // ========================================
@@ -138,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Handle window resize
+    // Handle window resize for mobile menu
     let resizeTimer;
     window.addEventListener('resize', function() {
         clearTimeout(resizeTimer);
@@ -167,5 +224,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Initial check in case page loads already scrolled
-    setTimeout(handleNavbarScroll, 100);
+    setTimeout(handleNavbarScroll, 150);
 });

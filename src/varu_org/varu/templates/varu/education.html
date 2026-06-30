@@ -11,19 +11,19 @@
         <div class="carousel-track" id="carouselTrack">
             <div class="carousel-slide">
                 <div class="image-placeholder">
-                    <img src="{% static 'varu/images/handsomekid.jpg' %}" alt="Description" style="width:95%; height:auto;">
+                    <img src="{% static 'varu/images/handsomekid.jpg' %}" alt="Khumi Chin child" class="carousel-image">
                 </div>
             </div>
             <div class="carousel-slide">
                 <div class="image-placeholder">
-                    <img src="{% static 'varu/images/class_std.jpg' %}" alt="Description" style="width:95%; height:auto;">
+                    <img src="{% static 'varu/images/class_std.jpg' %}" alt="Classroom students" class="carousel-image">
                 </div>
             </div>
-            <div class="carousel-slide">
-                <div class="image-placeholder">
-                      <img src="{% static 'varu/images/kids.jpg' %}" alt="Description" style="width:90%; height:auto;">
-                </div>
-            </div>
+              <div class="carousel-slide">
+    <div class="image-placeholder">
+        <img src="{% static 'varu/images/kids.jpg' %}" alt="Classroom students" class="carousel-image" style="object-position: center 25%;">
+    </div>
+</div>
         </div>
         <button class="carousel-btn prev-btn" aria-label="Previous">
             <i class="fas fa-chevron-left"></i>
@@ -39,7 +39,7 @@
 <!-- ===== HERO SECTION ===== -->
 <section class="education-hero">
     <div class="container">
-         <h2 class="about-title"> Education at the Varu River</h2><br>
+        <h2 class="about-title">Education at the Varu River</h2><br>
         <div class="education-hero-content">
             <p style="color:#000;font-weight:900;font-size:1.2rem;line-height:1.5;font-family:'Segoe UI',Arial,sans-serif;letter-spacing:0.01em;">
                 "Every child deserves a chance to learn, to dream, and to build a brighter future."
@@ -54,13 +54,14 @@
         <div class="education-issue-grid">
             <div class="education-issue-image">
                 <div class="image-placeholder">
-                      <img src="{% static 'varu/images/class.jpg' %}" alt="Description" style="width:100%; height:auto;">
+                    <img src="{% static 'varu/images/class.jpg' %}" alt="Classroom in Varu community" class="issue-image">
+                    <div class="image-caption">Community classroom along the Varu River</div>
                 </div>
             </div>
             <div class="education-issue-content">
                 <span class="education-tag">Advocating for Education</span>
                 <p>Education is one of the greatest challenges facing the communities along the Varu River. For many children, access to quality learning has been limited for years by geographic isolation and has become even more difficult due to the ongoing crisis in Myanmar.</p>
-                <p>Many villages lack safe and adequate school buildings, leaving children to learn in temporary shelters or community spaces that are not designed for education. Schools often have limited teaching materials, insufficient textbooks, and few learning resources, making it difficult to provide a quality learning environment.  At the same time, they face a severe shortage of qualified teachers, leaving many classrooms dependent on volunteers with little or no formal training.</p>
+                <p>Many villages lack safe and adequate school buildings, leaving children to learn in temporary shelters or community spaces that are not designed for education. Schools often have limited teaching materials, insufficient textbooks, and few learning resources, making it difficult to provide a quality learning environment. At the same time, they face a severe shortage of qualified teachers, leaving many classrooms dependent on volunteers with little or no formal training.</p>
             </div>
         </div>
     </div>
@@ -77,7 +78,8 @@
             </div>
             <div class="education-issue-image">
                 <div class="image-placeholder">
-                       <img src="{% static 'varu/images/edupage3.jpg' %}" alt="Description" style="width:100%; height:auto;">
+                    <img src="{% static 'varu/images/edupage3.jpg' %}" alt="Education resources" class="issue-image">
+                    <div class="image-caption">Limited resources in community schools</div>
                 </div>
             </div>
         </div>
@@ -103,15 +105,19 @@
                 <br>
                 <ul class="advocacy-list">
                     <li>
+                        <i class="fas fa-book"></i>
                         <span><strong>Providing basic learning materials and resources</strong></span>
                     </li>
                     <li>
+                        <i class="fas fa-chalkboard-teacher"></i>
                         <span><strong>Supporting local volunteer teachers with training opportunities</strong></span>
                     </li>
                     <li>
+                        <i class="fas fa-users"></i>
                         <span><strong>Building capacity for community‑led education</strong></span>
                     </li>
                     <li>
+                        <i class="fas fa-school"></i>
                         <span><strong>Improving learning environments where possible</strong></span>
                     </li>
                 </ul>

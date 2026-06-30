@@ -233,6 +233,13 @@ blockquote {
     border-bottom: 3px solid var(--crimson);
     padding: 0.5rem 0;
     transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    /* FIX: Prevent blinking/shaking */
+    will-change: transform, padding, min-height;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    isolation: isolate;
 }
 
 .nav-container {
@@ -246,6 +253,7 @@ blockquote {
     gap: 1rem;
     min-height: 90px;
     transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    will-change: padding, min-height;
 }
 
 /* ========== LOGO STYLES - BIGGER ========== */
@@ -281,6 +289,7 @@ blockquote {
     flex-shrink: 0;
     overflow: hidden;
     background: transparent;
+    will-change: width, height;
 }
 
 .logo-img {
@@ -310,6 +319,7 @@ blockquote {
     line-height: 1.2;
     font-family: 'Roboto', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    will-change: font-size;
 }
 
 /* ===== DOUBLE LOGO DIVIDER - BIGGER ===== */
@@ -323,6 +333,7 @@ blockquote {
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(158, 42, 47, 0.2);
     transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    will-change: height, margin;
 }
 
 .logo-divider::after {
@@ -336,6 +347,7 @@ blockquote {
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(122, 31, 35, 0.25);
     transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    will-change: height, bottom;
 }
 
 .logo-sub {
@@ -348,6 +360,7 @@ blockquote {
     margin-top: 12px;
     font-family: 'Roboto', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    will-change: font-size, margin-top, letter-spacing;
 }
 
 /* ========== NAV LINKS ========== */
@@ -378,6 +391,7 @@ blockquote {
     cursor: pointer;
     letter-spacing: 0.3px;
     font-family: var(--font-body);
+    will-change: font-size, padding;
 }
 
 .nav-link:hover {
@@ -406,6 +420,7 @@ blockquote {
     box-shadow: 0 4px 16px rgba(158, 42, 47, 0.25);
     white-space: nowrap;
     letter-spacing: 0.5px;
+    will-change: padding, font-size;
 }
 
 .donate-nav:hover {
@@ -519,12 +534,14 @@ blockquote {
     padding: 0.1rem 0;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     border-bottom: 2px solid var(--crimson);
+    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1) !important;
 }
 
 /* Shrink container */
 .navbar-shrunk .nav-container {
     min-height: 60px;
     padding: 0.4rem 2rem;
+    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1) !important;
 }
 
 /* For laptop screens - adjust left padding when shrunk */
@@ -539,39 +556,46 @@ blockquote {
 .navbar-shrunk .logo-icon {
     width: 60px;
     height: 60px;
+    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1) !important;
 }
 
 /* Shrink logo text */
 .navbar-shrunk .logo-main {
     font-size: 2rem;
+    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1) !important;
 }
 
 .navbar-shrunk .logo-divider {
     height: 3px;
     margin: 2px 0;
+    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1) !important;
 }
 
 .navbar-shrunk .logo-divider::after {
     height: 3px;
     bottom: -7px;
+    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1) !important;
 }
 
 .navbar-shrunk .logo-sub {
     font-size: 1rem;
     letter-spacing: 2px;
     margin-top: 8px;
+    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1) !important;
 }
 
 /* Shrink nav links */
 .navbar-shrunk .nav-link {
     font-size: 0.95rem;
     padding: 0.4rem 1rem;
+    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1) !important;
 }
 
 /* Shrink donate button */
 .navbar-shrunk .donate-nav {
     padding: 0.6rem 1.6rem !important;
     font-size: 0.9rem !important;
+    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1) !important;
 }
 
 /* Adjust dropdown when shrunk */
@@ -582,11 +606,6 @@ blockquote {
 .navbar-shrunk .dropdown-menu li a {
     padding: 0.6rem 1.4rem;
     font-size: 0.8rem;
-}
-
-/* Smooth transition for all navbar children */
-.navbar-shrunk * {
-    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
 }
 
 /* ========== RESPONSIVE - BIGGER LOGO ON ALL DEVICES ========== */
