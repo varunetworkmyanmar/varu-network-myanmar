@@ -1,11 +1,33 @@
-venv/
+# Environment variables
+.env
+
+# Python cache
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+
+# Database files
 *.sqlite3
+
+# Logs
 *.log
-media/
-staticfiles/
-.env
+
+# OS/system files
 .DS_Store
+Thumbs.db
+
+# Virtual environment
+venv/
+env/
+
+# Static and media (if collected/generated)
+staticfiles/
+media/
+
+# Migrations (optional, if you don’t want to track them)
+# */migrations/
+
+# IDE/project files
+.vscode/
+.idea/
