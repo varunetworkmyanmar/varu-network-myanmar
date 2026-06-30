@@ -1,0 +1,257 @@
+/* ========================================
+   MISSION PAGE STYLES - CLEAN & PROFESSIONAL
+   ======================================== */
+
+/* ===== HERO SECTION ===== */
+.mission-hero {
+    padding: 6rem 0 5rem;
+    background: var(--white);
+}
+
+.mission-hero-content {
+    max-width: 700px;
+}
+
+.mission-hero-content h1 {
+    font-weight: 800;
+    color: var(--charcoal);
+    line-height: 1.15;
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.02em;
+    transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.mission-hero-content h1:hover {
+    transform: translateX(6px);
+}
+
+.mission-hero-content p {
+    color: var(--gray-600);
+    line-height: 1.7;
+    max-width: 550px;
+    font-weight: 400;
+    transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.mission-hero-content p:hover {
+    transform: translateX(4px);
+}
+
+/* ===== ABOUT SECTION ===== */
+.mission-about {
+    padding: 5rem 0;
+    background: var(--white);
+    border-top: 1px solid var(--gray-100);
+}
+
+.mission-about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mission-about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.mission-tag {
+    display: inline-block;
+    color: var(--crimson);
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    padding: 0.3rem 1rem;
+    width: fit-content;
+    transition: transform 0.3s ease;
+    cursor: default;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.mission-tag:hover {
+    transform: translateX(4px);
+}
+
+.mission-about-content p {
+    color: var(--gray-600);
+    line-height: 1.8;
+    max-width: 100%;
+    transition: transform 0.4s ease;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.mission-about-content p:hover {
+    transform: translateX(4px);
+}
+
+.mission-about-content p strong {
+    color: var(--crimson);
+    font-weight: 700;
+}
+
+/* ===== DETAIL SECTION ===== */
+.mission-detail {
+    padding: 5rem 0;
+    background: var(--gray-50);
+    border-top: 1px solid var(--gray-100);
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.mission-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mission-detail-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.mission-detail-content .mission-tag {
+    color: var(--crimson);
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    padding: 0.3rem 1rem;
+    width: fit-content;
+    transition: transform 0.3s ease;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.mission-detail-content .mission-tag:hover {
+    transform: translateX(4px);
+}
+
+.mission-detail-content p {
+    color: var(--gray-600);
+    line-height: 1.8;
+    max-width: 100%;
+    transition: transform 0.4s ease;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.mission-detail-content p:hover {
+    transform: translateX(4px);
+}
+
+/* ===== WHY IT MATTERS SECTION ===== */
+.mission-why {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.mission-why-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mission-why-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.mission-why-content .mission-tag {
+    color: var(--crimson);
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    padding: 0.3rem 1rem;
+    width: fit-content;
+    transition: transform 0.3s ease;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.mission-why-content .mission-tag:hover {
+    transform: translateX(4px);
+}
+
+.mission-why-content p {
+    color: var(--gray-600);
+    line-height: 1.8;
+    max-width: 100%;
+    transition: transform 0.4s ease;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.mission-why-content p:hover {
+    transform: translateX(4px);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .mission-hero {
+        padding: 4rem 0 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .mission-hero {
+        padding: 3rem 0 2rem;
+    }
+    
+    .mission-about,
+    .mission-detail,
+    .mission-why {
+        padding: 3rem 0;
+    }
+    
+    .mission-about-content p,
+    .mission-detail-content p,
+    .mission-why-content p {
+        max-width: 100%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .mission-hero {
+        padding: 2.5rem 0 1.5rem;
+    }
+    
+    .mission-about,
+    .mission-detail,
+    .mission-why {
+        padding: 2rem 0;
+    }
+    
+    .mission-hero-content p {
+        font-size: 0.9rem !important;
+    }
+    
+    .mission-about-content p,
+    .mission-detail-content p,
+    .mission-why-content p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 360px) {
+    .mission-hero-content p {
+        font-size: 0.85rem !important;
+    }
+    
+    .mission-about-content p,
+    .mission-detail-content p,
+    .mission-why-content p {
+        font-size: 0.85rem;
+    }
+}

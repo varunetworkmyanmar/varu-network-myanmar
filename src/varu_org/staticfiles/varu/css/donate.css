@@ -1,0 +1,304 @@
+/* ========================================
+   DONATE PAGE - SIMPLE & CLEAN
+   ======================================== */
+
+/* ===== HERO ===== */
+.donate-hero {
+    padding: 5rem 0 4rem;
+    background: var(--white);
+}
+
+.donate-hero-content {
+    max-width: 650px;
+}
+
+.donate-tag {
+    display: inline-block;
+    color: var(--crimson);
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.donate-hero-content h1 {
+    font-weight: 800;
+    color: var(--charcoal);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.donate-hero-content p {
+    color: var(--gray-600);
+    line-height: 1.7;
+    max-width: 550px;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+/* ===== MESSAGE ===== */
+.donate-message {
+    padding: 2rem 0 3rem;
+    background: var(--white);
+}
+
+.message-box {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3rem 2.5rem;
+    background: var(--gray-50);
+    border-radius: 16px;
+}
+
+.message-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1.2rem;
+    background: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message-icon i {
+    color: var(--crimson);
+    font-size: 1.8rem;
+}
+
+.message-box h2 {
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 1rem;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.message-box p {
+    color: var(--gray-600);
+    line-height: 1.7;
+    max-width: 550px;
+    margin: 0 auto 0.8rem;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.message-box p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* ===== TEAM ===== */
+.donate-team {
+    padding: 3rem 0 4rem;
+    background: var(--white);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.team-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--gray-100);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.04);
+}
+
+.team-avatar {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 1rem;
+    background: var(--crimson);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-avatar i {
+    color: var(--white);
+    font-size: 1.4rem;
+}
+
+.team-card h3 {
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 0.1rem;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.team-nickname {
+    display: block;
+    color: var(--gray-500);
+    font-weight: 400;
+    font-size: 0.85em;
+    font-style: italic;
+    margin-bottom: 0.3rem;
+    font-family: inherit;
+    letter-spacing: 0.3px;
+}
+
+.team-role {
+    color: var(--gray-400);
+    margin-bottom: 1rem;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.team-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--gray-600);
+    text-decoration: none;
+    padding: 0.3rem 0;
+    transition: color 0.3s ease;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.team-link i {
+    color: var(--crimson);
+    font-size: 0.9rem;
+}
+
+.team-link:hover {
+    color: var(--crimson);
+}
+
+/* ===== TRANSPARENCY ===== */
+.donate-transparency {
+    padding: 4rem 0;
+    background: var(--white);
+    border-top: 1px solid var(--gray-100);
+}
+
+.transparency-box {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.transparency-box .donate-tag {
+    margin-bottom: 0.5rem;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.transparency-box h2 {
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 0.8rem;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.transparency-box p {
+    color: var(--gray-600);
+    margin-bottom: 2rem;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.promise-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.promise-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 1rem;
+    background: var(--gray-50);
+    border-radius: 8px;
+    text-align: left;
+}
+
+.promise-item i {
+    color: var(--crimson);
+    flex-shrink: 0;
+    font-size: 0.9rem;
+}
+
+.promise-item span {
+    color: var(--gray-600);
+    font-size: inherit;
+    font-family: inherit;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+    .donate-hero {
+        padding: 3rem 0 2rem;
+    }
+    
+    .message-box {
+        padding: 2rem 1.5rem;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+    
+    .promise-list {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .donate-hero {
+        padding: 2.5rem 0 1.5rem;
+    }
+    
+    .message-box {
+        padding: 1.5rem 1rem;
+    }
+    
+    .message-icon {
+        width: 52px;
+        height: 52px;
+    }
+    
+    .message-icon i {
+        font-size: 1.4rem;
+    }
+    
+    .team-card {
+        padding: 1.5rem;
+    }
+    
+    .promise-item {
+        padding: 0.5rem 0.8rem;
+    }
+    
+    .team-nickname {
+        font-size: 0.75em;
+    }
+}

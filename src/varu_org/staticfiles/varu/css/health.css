@@ -1,0 +1,526 @@
+/* ========================================
+   HEALTHCARE PAGE - COMPLETE CSS
+   ======================================== */
+
+/* ===== HERO SECTION ===== */
+.health-hero {
+    padding: 6rem 0 5rem;
+    background: var(--white);
+}
+
+.health-hero-content {
+    max-width: 700px;
+}
+
+.health-tag {
+    display: inline-block;
+    color: var(--crimson);
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    padding: 0.3rem 1rem;
+    width: fit-content;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+    cursor: default;
+    font-size: inherit;
+}
+
+.health-tag:hover {
+    transform: translateX(4px);
+}
+
+.health-hero-content h1 {
+    font-weight: 800;
+    color: var(--charcoal);
+    line-height: 1.15;
+    margin-bottom: 0.3rem;
+    letter-spacing: -0.02em;
+    font-size: inherit;
+    transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.health-hero-content h1:hover {
+    transform: translateX(6px);
+}
+
+.health-hero-sub {
+    font-weight: 600;
+    color: var(--crimson);
+    margin-bottom: 1.2rem;
+    font-size: inherit;
+}
+
+.health-hero-desc {
+    font-weight: 400;
+    color: var(--gray-600);
+    line-height: 1.8;
+    max-width: 550px;
+    margin-bottom: 0;
+    font-size: inherit;
+    transition: transform 0.4s ease;
+}
+
+.health-hero-desc:hover {
+    transform: translateX(4px);
+}
+
+/* ===== ABOUT SECTION - SINGLE COLUMN ===== */
+.health-about {
+    padding: 5rem 0;
+    background: var(--white);
+    border-top: 1px solid var(--gray-100);
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.health-about-grid {
+    display: block;
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+.health-about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.health-about-content h2 {
+    font-weight: 800;
+    color: var(--charcoal);
+    line-height: 1.2;
+    margin: 0;
+    letter-spacing: -0.02em;
+    font-size: inherit;
+    transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.health-about-content h2:hover {
+    transform: translateX(6px);
+}
+
+.health-about-content p {
+    color: var(--gray-600);
+    line-height: 1.8;
+    max-width: 100%;
+    font-size: inherit;
+    transition: transform 0.4s ease;
+}
+
+.health-about-content p:hover {
+    transform: translateX(4px);
+}
+
+/* ========================================
+   HEALTH IMAGE ROWS - CLEAN STYLE
+   ======================================== */
+
+.health-image-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin: 1.5rem 0;
+}
+
+.health-image-row-full {
+    grid-template-columns: 1fr;
+}
+
+.health-image-item {
+    width: 100%;
+}
+
+.health-image-item-full {
+    max-width: 100%;
+}
+
+.health-image-box {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    min-height: 180px;
+    transition: background 0.3s ease, border-color 0.3s ease;
+    text-align: center;
+}
+
+.health-image-box:hover {
+    background: var(--gray-100);
+    border-color: var(--crimson);
+}
+
+.health-image-box i {
+    font-size: 2.5rem;
+    color: var(--crimson);
+    opacity: 0.6;
+}
+
+.health-image-box span {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.health-image-box .image-caption {
+    font-size: 0.85rem;
+    color: var(--gray-500);
+    font-weight: 400;
+}
+
+/* ===== HEALTH LIST ===== */
+.health-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+.health-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--gray-600);
+    line-height: 1.5;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    border-radius: 8px;
+    font-size: inherit;
+    transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1),
+                color 0.3s ease,
+                background 0.3s ease;
+    cursor: default;
+}
+
+.health-list li:hover {
+    transform: translateX(8px);
+    color: var(--charcoal);
+    background: var(--gray-50);
+}
+
+.health-list li i {
+    color: var(--crimson);
+    flex-shrink: 0;
+    opacity: 0.8;
+    font-size: inherit;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.health-list li:hover i {
+    transform: scale(1.2) rotate(-5deg);
+    opacity: 1;
+}
+
+/* ========================================
+   TRUE STORIES SECTION
+   ======================================== */
+
+.health-stories {
+    padding: 5rem 0;
+    background: var(--gray-50);
+}
+
+.health-stories-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.health-stories-header .health-tag {
+    margin: 0 auto 0.5rem;
+}
+
+.health-stories-header h2 {
+    font-weight: 800;
+    color: var(--charcoal);
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    font-size: inherit;
+}
+
+.health-stories-header p {
+    color: var(--gray-600);
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: inherit;
+    line-height: 1.7;
+}
+
+.health-stories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+/* ===== STORY CARD ===== */
+.story-card {
+    display: block;
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1),
+                box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.story-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.10);
+}
+
+.story-card-image {
+    aspect-ratio: 1/1;
+    background: var(--gray-100);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.story-card-image .image-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    color: var(--gray-300);
+    width: 100%;
+    height: 100%;
+    background: var(--gray-50);
+    transition: background 0.3s ease;
+}
+
+.story-card:hover .story-card-image .image-placeholder {
+    background: var(--gray-100);
+}
+
+.story-card-image .image-placeholder i {
+    opacity: 0.4;
+    font-size: 2.5rem;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.story-card:hover .story-card-image .image-placeholder i {
+    transform: scale(1.1);
+    opacity: 0.6;
+}
+
+.story-card-image .image-placeholder span {
+    font-weight: 500;
+    color: var(--gray-400);
+    font-size: 0.9rem;
+}
+
+.story-card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.story-tag {
+    display: inline-block;
+    color: var(--crimson);
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.story-card-content h3 {
+    font-weight: 700;
+    color: var(--charcoal);
+    font-size: 1.1rem;
+    line-height: 1.3;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.story-card:hover .story-card-content h3 {
+    color: var(--crimson);
+}
+
+.story-card-content p {
+    color: var(--gray-600);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0.2rem 0 0.3rem;
+}
+
+.story-read-more {
+    display: inline-block;
+    color: var(--crimson);
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: transform 0.3s ease;
+    margin-top: 0.2rem;
+}
+
+.story-card:hover .story-read-more {
+    transform: translateX(6px);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .health-hero {
+        padding: 4rem 0 3rem;
+    }
+    
+    .health-about-grid {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+    
+    .health-stories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .health-gallery-grid {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .health-hero {
+        padding: 3rem 0 2rem;
+    }
+    
+    .health-about,
+    .health-gallery,
+    .health-stories {
+        padding: 3rem 0;
+    }
+    
+    .health-about-grid {
+        padding: 0 0.5rem;
+    }
+    
+    .health-about-content p {
+        max-width: 100%;
+    }
+    
+    .health-stories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .health-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .health-stories-header {
+        margin-bottom: 2.5rem;
+    }
+    
+    .story-card-content {
+        padding: 1.2rem;
+    }
+    
+    .story-card-content h3 {
+        font-size: 1rem;
+    }
+
+    /* Image rows responsive */
+    .health-image-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+    
+    .health-image-box {
+        padding: 2rem 1rem;
+        min-height: 150px;
+    }
+    
+    .health-image-box i {
+        font-size: 2rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .health-hero {
+        padding: 2.5rem 0 1.5rem;
+    }
+    
+    .health-stories-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .health-gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+    }
+    
+    .health-gallery-header {
+        margin-bottom: 2rem;
+    }
+    
+    .health-stories-header p {
+        padding: 0 0.5rem;
+    }
+    
+    .story-card-image .image-placeholder i {
+        font-size: 2rem;
+    }
+
+    .health-image-box {
+        min-height: 120px;
+        padding: 1.5rem 1rem;
+    }
+    
+    .health-image-box i {
+        font-size: 1.8rem;
+    }
+    
+    .health-image-box span {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .health-stories-grid {
+        max-width: 100%;
+    }
+    
+    .story-card-content {
+        padding: 1rem;
+    }
+    
+    .story-card-content h3 {
+        font-size: 0.95rem;
+    }
+    
+    .story-card-content p {
+        font-size: 0.85rem;
+    }
+
+    .health-image-box {
+        min-height: 100px;
+        padding: 1rem 0.8rem;
+    }
+    
+    .health-image-box i {
+        font-size: 1.5rem;
+    }
+    
+    .health-image-box span {
+        font-size: 0.75rem;
+    }
+}

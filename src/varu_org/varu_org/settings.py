@@ -107,6 +107,11 @@ STATIC_URL = "/static/"
 
 # For production (collecting into one place):
 STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_URL = "/static/"
+
+
+# WhiteNoise storage for production
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 SECURE_BROWSER_XSS_FILTER = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
