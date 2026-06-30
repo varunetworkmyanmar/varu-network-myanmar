@@ -111,6 +111,68 @@
     transform: translateX(4px);
 }
 
+/* ========================================
+   HEALTH IMAGE ROWS - CLEAN STYLE
+   ======================================== */
+
+.health-image-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin: 1.5rem 0;
+}
+
+.health-image-row-full {
+    grid-template-columns: 1fr;
+}
+
+.health-image-item {
+    width: 100%;
+}
+
+.health-image-item-full {
+    max-width: 100%;
+}
+
+.health-image-box {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    min-height: 180px;
+    transition: background 0.3s ease, border-color 0.3s ease;
+    text-align: center;
+}
+
+.health-image-box:hover {
+    background: var(--gray-100);
+    border-color: var(--crimson);
+}
+
+.health-image-box i {
+    font-size: 2.5rem;
+    color: var(--crimson);
+    opacity: 0.6;
+}
+
+.health-image-box span {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.health-image-box .image-caption {
+    font-size: 0.85rem;
+    color: var(--gray-500);
+    font-weight: 400;
+}
+
 /* ===== HEALTH LIST ===== */
 .health-list {
     list-style: none;
@@ -370,7 +432,23 @@
     .story-card-content h3 {
         font-size: 1rem;
     }
+
+    /* Image rows responsive */
+    .health-image-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin: 1rem 0;
+    }
     
+    .health-image-box {
+        padding: 2rem 1rem;
+        min-height: 150px;
+    }
+    
+    .health-image-box i {
+        font-size: 2rem;
+    }
+}
 
 /* Mobile */
 @media (max-width: 480px) {
@@ -401,7 +479,21 @@
     .story-card-image .image-placeholder i {
         font-size: 2rem;
     }
+
+    .health-image-box {
+        min-height: 120px;
+        padding: 1.5rem 1rem;
+    }
     
+    .health-image-box i {
+        font-size: 1.8rem;
+    }
+    
+    .health-image-box span {
+        font-size: 0.8rem;
+    }
+}
+
 @media (max-width: 360px) {
     .health-stories-grid {
         max-width: 100%;
@@ -417,5 +509,18 @@
     
     .story-card-content p {
         font-size: 0.85rem;
+    }
+
+    .health-image-box {
+        min-height: 100px;
+        padding: 1rem 0.8rem;
+    }
+    
+    .health-image-box i {
+        font-size: 1.5rem;
+    }
+    
+    .health-image-box span {
+        font-size: 0.75rem;
     }
 }

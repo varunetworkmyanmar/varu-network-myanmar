@@ -44,8 +44,8 @@
             <li class="nav-item" id="priorityDropdown">
                 <a href="#" class="nav-link">Why We Started <i class="fas fa-chevron-down"></i></a>
                 <ul class="dropdown-menu">
-                    <li><a href="{% url 'education' %}">Education Inefficiencies</a></li>
-                    <li><a href="{% url 'health' %}">Healthcare Deficiency</a></li>
+                    <li><a href="{% url 'education' %}">Education Challenges</a></li>
+                    <li><a href="{% url 'health' %}">Healthcare Challenges</a></li>
                 </ul>
             </li>
             <li class="nav-item">
@@ -73,17 +73,7 @@
     <div class="footer-container">
         <!-- Column 1: Logo & CTA -->
         <div class="footer-col footer-col-brand">
-            <div class="footer-logo">
-                <div class="footer-logo-icon">
-                    <img src="{% static 'varu/images/Gemini_Generated_Image_t2xlwit2xlwit2xl (1).png' %}" alt="Varu Network Logo" class="footer-logo-img">
-                </div>
-                <div class="footer-logo-text">
-                    <span class="footer-logo-main">Varu Network</span>
-                    <span class="footer-logo-divider"></span>
-                    <span class="footer-logo-sub">Myanmar</span>
-                </div>
-            </div>
-            <p class="footer-desc">Our mission is to build a strong institution that will last for generations, dedicated to providing education and basic healthcare for Varu communities.</p>
+            <p class="footer-desc">Our mission is to build a strong non-profit institution that will last for generations, dedicated to providing education and basic healthcare for Varu communities.</p>
             <a href="{% url 'donate' %}" class="footer-cta">
                 <i class="fas fa-dove"></i> Support Our Mission
             </a>
@@ -112,10 +102,10 @@
         <div class="footer-col">
             <h4 class="footer-heading">Quick Menu</h4>
             <ul class="footer-links">
-                <li><a href="#">Who We Are</a></li>
-                <li><a href="#">Why We Started</a></li>
-                <li><a href="#">Our Approach</a></li>
-                <li><a href="#">Impact Stories</a></li>
+                <li><a href="{% url 'mission' %}">Our mission</a></li>
+                <li><a href="{% url 'team' %}">The team behind it</a></li>
+                <li><a href="{% url 'education' %}">Education Challenges</a></li>
+                <li><a href="{% url 'health' %}">Healthcare Challenges</a></li>
                 <li><a href="{% url 'contactus' %}">Contact Us</a></li>
             </ul>
         </div>
