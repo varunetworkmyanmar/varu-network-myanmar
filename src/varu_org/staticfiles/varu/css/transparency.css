@@ -1,0 +1,640 @@
+/* ========================================
+   FINANCIAL TRANSPARENCY TABLE STYLES
+   ======================================== */
+
+.financial-section {
+    padding: 3rem 0 4rem;
+    background: var(--warm-bg);
+}
+
+.financial-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.financial-tag {
+    font-family: var(--font-body);
+    font-size: var(--font-small);
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--crimson);
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.financial-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-3xl);
+    font-weight: 700;
+    color: var(--charcoal);
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+}
+
+.financial-subtitle {
+    font-family: var(--font-body);
+    font-size: var(--font-medium);
+    color: var(--gray-600);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* ===== FINANCIAL ACTIONS - EXPENSES BUTTON ===== */
+.financial-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.expenses-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--crimson);
+    color: var(--white);
+    padding: 0.8rem 2rem;
+    font-family: var(--font-body);
+    font-size: var(--font-base);
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: var(--transition-standard);
+    box-shadow: 0 4px 12px rgba(158, 42, 47, 0.3);
+    letter-spacing: 0.5px;
+}
+
+.expenses-btn i {
+    font-size: var(--font-medium);
+}
+
+.expenses-btn:hover {
+    background: var(--crimson-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(158, 42, 47, 0.4);
+    color: var(--white);
+    text-decoration: none;
+}
+
+.expenses-btn:active {
+    transform: translateY(0);
+}
+
+/* ========================================
+   MONTH SELECTOR - NO ROUNDED CORNERS
+   ======================================== */
+
+.month-selector-wrapper {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 0;
+    box-shadow: var(--shadow-sm);
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.month-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.month-nav {
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid var(--gray-200);
+    width: 44px;
+    height: 44px;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition-standard);
+    color: var(--charcoal);
+    font-size: var(--font-medium);
+}
+
+.month-nav:hover {
+    background: var(--crimson);
+    color: var(--white);
+    border-color: var(--crimson);
+    transform: scale(1.02);
+}
+
+.month-nav:active {
+    transform: scale(0.95);
+}
+
+.month-display {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    min-width: 200px;
+    justify-content: center;
+}
+
+.month-name {
+    font-family: var(--font-heading);
+    font-size: var(--font-2xl);
+    font-weight: 700;
+    color: var(--charcoal);
+    letter-spacing: 0.5px;
+}
+
+.month-year {
+    font-family: var(--font-body);
+    font-size: var(--font-medium);
+    font-weight: 500;
+    color: var(--gray-600);
+}
+
+/* ===== TABLE STYLES - TRANSPARENT, NO ROUNDED CORNERS ===== */
+.table-wrapper {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 0;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.financial-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-body);
+    font-size: var(--font-base);
+    text-align: left;
+    background: transparent;
+}
+
+/* ===== HEADER ===== */
+.financial-table thead {
+    background: rgba(26, 26, 46, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.financial-table thead th {
+    font-family: var(--font-body);
+    font-size: var(--font-small);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--white);
+    padding: 1rem 1.5rem;
+    white-space: nowrap;
+    border-bottom: none;
+}
+
+/* ===== BODY ROWS ===== */
+.financial-table tbody tr {
+    border-bottom: 1px solid rgba(229, 231, 235, 0.3);
+    transition: var(--transition-standard);
+    background: transparent;
+}
+
+.financial-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.financial-table tbody tr:hover {
+    background: rgba(254, 249, 245, 0.4);
+}
+
+.financial-table tbody td {
+    font-family: var(--font-body);
+    font-size: var(--font-base);
+    color: var(--gray-700);
+    padding: 0.9rem 1.5rem;
+    line-height: 1.6;
+    background: transparent;
+}
+
+.financial-table tbody td:first-child {
+    font-weight: 600;
+    color: var(--gray-600);
+    width: 60px;
+}
+
+.financial-table tbody td:nth-child(2) {
+    font-weight: 500;
+    color: var(--charcoal);
+}
+
+.financial-table tbody td:nth-child(3) {
+    font-weight: 600;
+    color: var(--crimson);
+    font-size: var(--font-medium);
+}
+
+.financial-table tbody td:nth-child(4) {
+    color: var(--gray-600);
+    font-size: var(--font-small);
+}
+
+.financial-table tbody td:last-child {
+    color: var(--gray-700);
+}
+
+/* ===== FOOTER / TOTAL ROW ===== */
+.financial-table tfoot .table-total {
+    background: rgba(243, 244, 246, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(158, 42, 47, 0.2);
+}
+
+.financial-table tfoot .table-total td {
+    font-family: var(--font-body);
+    font-size: var(--font-medium);
+    padding: 1rem 1.5rem;
+    color: var(--charcoal);
+    background: transparent;
+}
+
+.financial-table tfoot .table-total td strong {
+    font-family: var(--font-body);
+    font-weight: 700;
+    color: var(--charcoal);
+}
+
+.financial-table tfoot .table-total td:nth-child(3) {
+    color: var(--crimson);
+    font-weight: 700;
+    font-size: var(--font-large);
+}
+
+/* ===== NOTE SECTION ===== */
+.financial-note {
+    margin-top: 1.5rem;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 0;
+    border-left: 3px solid var(--crimson);
+    box-shadow: var(--shadow-sm);
+}
+
+.financial-note p {
+    font-family: var(--font-body);
+    font-size: var(--font-small);
+    color: var(--gray-600);
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.financial-note p i {
+    color: var(--crimson);
+    font-size: var(--font-medium);
+}
+
+.financial-note p a {
+    color: var(--crimson);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.financial-note p a:hover {
+    color: var(--crimson-dark);
+    text-decoration: underline;
+}
+
+/* ===== EXPENSES FOOTER LINK ===== */
+.expenses-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+.expenses-footer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-body);
+    font-size: var(--font-base);
+    font-weight: 500;
+    color: var(--charcoal);
+    text-decoration: none;
+    transition: var(--transition-standard);
+    padding: 0.5rem 1rem;
+    border-bottom: 2px solid transparent;
+}
+
+.expenses-footer-link i {
+    color: var(--crimson);
+    transition: var(--transition-standard);
+}
+
+.expenses-footer-link:hover {
+    color: var(--crimson);
+    border-bottom-color: var(--crimson);
+}
+
+.expenses-footer-link:hover i {
+    transform: translateX(4px);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+    .financial-section {
+        padding: 2rem 0 3rem;
+    }
+
+    .financial-title {
+        font-size: var(--font-2xl);
+    }
+
+    .financial-subtitle {
+        font-size: var(--font-base);
+        padding: 0 0.5rem;
+    }
+
+    .financial-actions {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    .expenses-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.7rem 1.5rem;
+        font-size: var(--font-small);
+    }
+
+    .month-selector-wrapper {
+        padding: 1rem 1.2rem;
+        border-radius: 0;
+    }
+
+    .month-selector {
+        gap: 1rem;
+    }
+
+    .month-display {
+        min-width: 140px;
+    }
+
+    .month-name {
+        font-size: var(--font-xl);
+    }
+
+    .month-year {
+        font-size: var(--font-small);
+    }
+
+    .month-nav {
+        width: 38px;
+        height: 38px;
+        font-size: var(--font-small);
+        border-radius: 0;
+    }
+
+    .table-wrapper {
+        border-radius: 0;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .financial-table {
+        font-size: var(--font-small);
+        min-width: 600px;
+    }
+
+    .financial-table thead th {
+        font-size: var(--font-small);
+        padding: 0.8rem 1rem;
+    }
+
+    .financial-table tbody td {
+        font-size: var(--font-small);
+        padding: 0.7rem 1rem;
+    }
+
+    .financial-table tbody td:nth-child(3) {
+        font-size: var(--font-base);
+    }
+
+    .financial-table tfoot .table-total td {
+        font-size: var(--font-base);
+        padding: 0.8rem 1rem;
+    }
+
+    .financial-table tfoot .table-total td:nth-child(3) {
+        font-size: var(--font-medium);
+    }
+
+    .financial-note {
+        padding: 0.8rem 1rem;
+        border-left-width: 3px;
+        border-radius: 0;
+    }
+
+    .financial-note p {
+        font-size: var(--font-small);
+        flex-wrap: wrap;
+    }
+
+    .expenses-footer-link {
+        font-size: var(--font-small);
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .financial-title {
+        font-size: var(--font-xl);
+    }
+
+    .expenses-btn {
+        font-size: var(--font-small);
+        padding: 0.6rem 1rem;
+    }
+
+    .month-selector-wrapper {
+        padding: 0.8rem 0.8rem;
+    }
+
+    .month-name {
+        font-size: var(--font-large);
+    }
+
+    .month-display {
+        min-width: 100px;
+        gap: 0.4rem;
+    }
+
+    .month-nav {
+        width: 34px;
+        height: 34px;
+        font-size: var(--font-small);
+        border-radius: 0;
+    }
+
+    .financial-table {
+        min-width: 500px;
+        font-size: var(--font-small);
+    }
+
+    .financial-table thead th {
+        font-size: var(--font-small);
+        padding: 0.6rem 0.8rem;
+        letter-spacing: 0.5px;
+    }
+
+    .financial-table tbody td {
+        font-size: var(--font-small);
+        padding: 0.6rem 0.8rem;
+    }
+
+    .financial-table tbody td:nth-child(3) {
+        font-size: var(--font-small);
+    }
+
+    .financial-table tfoot .table-total td {
+        font-size: var(--font-small);
+        padding: 0.6rem 0.8rem;
+    }
+
+    .financial-table tfoot .table-total td:nth-child(3) {
+        font-size: var(--font-base);
+    }
+
+    .expenses-footer-link {
+        font-size: var(--font-small);
+    }
+}
+
+/* ========================================
+   FINANCIAL SUMMARY CARDS
+   ======================================== */
+
+.financial-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.summary-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 1.5rem 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: var(--transition-standard);
+    border-radius: 0;
+}
+
+.summary-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.summary-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--crimson);
+    color: var(--white);
+    font-size: var(--font-xl);
+    flex-shrink: 0;
+    border-radius: 0;
+}
+
+.summary-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.summary-label {
+    font-family: var(--font-body);
+    font-size: var(--font-small);
+    color: var(--gray-600);
+    font-weight: 500;
+}
+
+.summary-value {
+    font-family: var(--font-heading);
+    font-size: var(--font-2xl);
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-top: 0.2rem;
+}
+
+.summary-value.highlight {
+    color: #10b981;
+}
+
+/* ========================================
+   RESPONSIVE FOR SUMMARY CARDS
+   ======================================== */
+
+@media (max-width: 992px) {
+    .financial-summary {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .financial-summary {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .summary-card {
+        padding: 1.2rem 1.5rem;
+    }
+
+    .summary-value {
+        font-size: var(--font-xl);
+    }
+
+    .summary-icon {
+        width: 45px;
+        height: 45px;
+        font-size: var(--font-large);
+    }
+}
+
+@media (max-width: 480px) {
+    .summary-card {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .summary-icon {
+        width: 40px;
+        height: 40px;
+        font-size: var(--font-medium);
+    }
+
+    .summary-value {
+        font-size: var(--font-large);
+    }
+
+    .summary-label {
+        font-size: var(--font-small);
+    }
+}
