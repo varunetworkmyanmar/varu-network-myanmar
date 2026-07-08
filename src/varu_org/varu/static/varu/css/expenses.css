@@ -1,0 +1,567 @@
+/* ========================================
+   EXPENSES TABLE STYLES
+   ======================================== */
+
+.expenses-section {
+    padding: 3rem 0 4rem;
+    background: var(--warm-bg);
+}
+
+.expenses-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.expenses-tag {
+    font-family: var(--font-body);
+    font-size: var(--font-small);
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--crimson);
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.expenses-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-3xl);
+    font-weight: 700;
+    color: var(--charcoal);
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+}
+
+.expenses-subtitle {
+    font-family: var(--font-body);
+    font-size: var(--font-medium);
+    color: var(--gray-600);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.expenses-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--charcoal);
+    color: var(--white);
+    padding: 0.8rem 2rem;
+    font-family: var(--font-body);
+    font-size: var(--font-base);
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: var(--transition-standard);
+    letter-spacing: 0.5px;
+}
+
+.back-btn:hover {
+    background: var(--crimson);
+    color: var(--white);
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+/* ===== EXPENSES SUMMARY ===== */
+.expenses-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.summary-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 1.5rem 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: var(--transition-standard);
+}
+
+.summary-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.summary-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--crimson);
+    color: var(--white);
+    font-size: var(--font-xl);
+    flex-shrink: 0;
+}
+
+.summary-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.summary-label {
+    font-family: var(--font-body);
+    font-size: var(--font-small);
+    color: var(--gray-600);
+    font-weight: 500;
+}
+
+.summary-value {
+    font-family: var(--font-heading);
+    font-size: var(--font-2xl);
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-top: 0.2rem;
+}
+
+/* ===== TABLE WRAPPER ===== */
+.table-wrapper {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 0;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ===== EXPENSES TABLE ===== */
+.expenses-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-body);
+    font-size: var(--font-base);
+    text-align: left;
+    background: transparent;
+}
+
+/* ===== HEADER ===== */
+.expenses-table thead {
+    background: rgba(26, 26, 46, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.expenses-table thead th {
+    font-family: var(--font-body);
+    font-size: var(--font-small);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--white);
+    padding: 1rem 1.5rem;
+    white-space: nowrap;
+    border-bottom: none;
+}
+
+/* ===== BODY ROWS ===== */
+.expenses-table tbody tr {
+    border-bottom: 1px solid rgba(229, 231, 235, 0.3);
+    transition: var(--transition-standard);
+    background: transparent;
+}
+
+.expenses-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.expenses-table tbody tr:hover {
+    background: rgba(254, 249, 245, 0.4);
+}
+
+.expenses-table tbody td {
+    font-family: var(--font-body);
+    font-size: var(--font-base);
+    color: var(--gray-700);
+    padding: 0.9rem 1.5rem;
+    line-height: 1.6;
+    background: transparent;
+    vertical-align: middle;
+}
+
+.expenses-table tbody td:first-child {
+    font-weight: 600;
+    color: var(--gray-600);
+    width: 50px;
+}
+
+/* ===== DESCRIPTION COLUMN ===== */
+.expense-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.expense-title {
+    font-weight: 600;
+    color: var(--charcoal);
+}
+
+.expense-category {
+    font-size: var(--font-small);
+    color: var(--gray-500);
+    margin-top: 0.2rem;
+}
+
+/* ===== AMOUNT COLUMN ===== */
+.expenses-table tbody td:nth-child(3) {
+    font-weight: 600;
+    color: var(--crimson);
+    font-size: var(--font-medium);
+}
+
+/* ===== APPROVED BY ===== */
+.approved-by {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--gray-700);
+}
+
+.approved-by i {
+    color: var(--crimson);
+    font-size: var(--font-small);
+}
+
+/* ===== PROJECT TAG ===== */
+.project-tag {
+    display: inline-block;
+    background: rgba(158, 42, 47, 0.1);
+    color: var(--crimson);
+    padding: 0.3rem 0.8rem;
+    font-family: var(--font-body);
+    font-size: var(--font-small);
+    font-weight: 500;
+    border: 1px solid rgba(158, 42, 47, 0.2);
+}
+
+/* ===== PROOF BUTTON ===== */
+.proof-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--crimson);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    font-family: var(--font-body);
+    font-size: var(--font-small);
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-standard);
+    border-radius: 0;
+    white-space: nowrap;
+}
+
+.proof-btn i {
+    font-size: var(--font-small);
+}
+
+.proof-btn:hover {
+    background: var(--crimson-dark);
+    transform: scale(1.05);
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* ===== FOOTER ===== */
+.expenses-table tfoot .table-total {
+    background: rgba(243, 244, 246, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(158, 42, 47, 0.2);
+}
+
+.expenses-table tfoot .table-total td {
+    font-family: var(--font-body);
+    font-size: var(--font-medium);
+    padding: 1rem 1.5rem;
+    color: var(--charcoal);
+    background: transparent;
+}
+
+.expenses-table tfoot .table-total td strong {
+    font-family: var(--font-body);
+    font-weight: 700;
+    color: var(--charcoal);
+}
+
+.expenses-table tfoot .table-total td:nth-child(3) {
+    color: var(--crimson);
+    font-weight: 700;
+    font-size: var(--font-large);
+}
+
+/* ===== MONTH SELECTOR ===== */
+.month-selector-wrapper {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 0;
+    box-shadow: var(--shadow-sm);
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.month-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.month-nav {
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid var(--gray-200);
+    width: 44px;
+    height: 44px;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition-standard);
+    color: var(--charcoal);
+    font-size: var(--font-medium);
+}
+
+.month-nav:hover {
+    background: var(--crimson);
+    color: var(--white);
+    border-color: var(--crimson);
+}
+
+.month-display {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    min-width: 200px;
+    justify-content: center;
+}
+
+.month-name {
+    font-family: var(--font-heading);
+    font-size: var(--font-2xl);
+    font-weight: 700;
+    color: var(--charcoal);
+}
+
+.month-year {
+    font-family: var(--font-body);
+    font-size: var(--font-medium);
+    font-weight: 500;
+    color: var(--gray-600);
+}
+
+/* ===== NOTE ===== */
+.expenses-note {
+    margin-top: 1.5rem;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 0;
+    border-left: 3px solid var(--crimson);
+    box-shadow: var(--shadow-sm);
+}
+
+.expenses-note p {
+    font-family: var(--font-body);
+    font-size: var(--font-small);
+    color: var(--gray-600);
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.expenses-note p i {
+    color: var(--crimson);
+    font-size: var(--font-medium);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 992px) {
+    .expenses-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .expenses-section {
+        padding: 2rem 0 3rem;
+    }
+
+    .expenses-title {
+        font-size: var(--font-2xl);
+    }
+
+    .expenses-subtitle {
+        font-size: var(--font-base);
+        padding: 0 0.5rem;
+    }
+
+    .expenses-actions {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    .back-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.7rem 1.5rem;
+        font-size: var(--font-small);
+    }
+
+    .expenses-summary {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .summary-card {
+        padding: 1.2rem 1.5rem;
+    }
+
+    .summary-value {
+        font-size: var(--font-xl);
+    }
+
+    .month-selector-wrapper {
+        padding: 1rem 1.2rem;
+    }
+
+    .month-selector {
+        gap: 1rem;
+    }
+
+    .month-display {
+        min-width: 140px;
+    }
+
+    .month-name {
+        font-size: var(--font-xl);
+    }
+
+    .month-year {
+        font-size: var(--font-small);
+    }
+
+    .month-nav {
+        width: 38px;
+        height: 38px;
+        font-size: var(--font-small);
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .expenses-table {
+        font-size: var(--font-small);
+        min-width: 800px;
+    }
+
+    .expenses-table thead th {
+        font-size: var(--font-small);
+        padding: 0.8rem 1rem;
+    }
+
+    .expenses-table tbody td {
+        font-size: var(--font-small);
+        padding: 0.7rem 1rem;
+    }
+
+    .expenses-table tbody td:nth-child(3) {
+        font-size: var(--font-base);
+    }
+
+    .proof-btn {
+        font-size: var(--font-small);
+        padding: 0.4rem 0.8rem;
+    }
+
+    .expenses-table tfoot .table-total td {
+        font-size: var(--font-base);
+        padding: 0.8rem 1rem;
+    }
+
+    .expenses-table tfoot .table-total td:nth-child(3) {
+        font-size: var(--font-medium);
+    }
+
+    .expenses-note {
+        padding: 0.8rem 1rem;
+    }
+
+    .expenses-note p {
+        font-size: var(--font-small);
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .expenses-title {
+        font-size: var(--font-xl);
+    }
+
+    .summary-card {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .summary-icon {
+        width: 40px;
+        height: 40px;
+        font-size: var(--font-large);
+    }
+
+    .summary-value {
+        font-size: var(--font-large);
+    }
+
+    .month-selector-wrapper {
+        padding: 0.8rem;
+    }
+
+    .month-name {
+        font-size: var(--font-large);
+    }
+
+    .month-display {
+        min-width: 100px;
+        gap: 0.4rem;
+    }
+
+    .month-nav {
+        width: 34px;
+        height: 34px;
+        font-size: var(--font-small);
+    }
+
+    .expenses-table {
+        min-width: 700px;
+    }
+}

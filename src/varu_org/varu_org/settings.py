@@ -16,6 +16,7 @@ CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', default='', cast=Csv())
 # Application definition
 
 INSTALLED_APPS = [
+    "jazzmin",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -24,6 +25,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'varu'
 ]
+
+JAZZMIN_SETTINGS = {
+    "site_title": "Varu Network Admin",
+    "site_header": "Varu Network",
+    "welcome_sign": "Welcome to Varu Network Admin",
+    "show_ui_builder": True, 
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

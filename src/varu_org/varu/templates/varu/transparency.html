@@ -1,0 +1,97 @@
+{% extends 'varu/base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'varu/css/transparency.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- ===== FINANCIAL TRANSPARENCY TABLE ===== -->
+<section class="financial-section">
+    <div class="container">
+        <div class="financial-header">
+            <span class="financial-tag">Transparency</span>
+            <h2 class="financial-title">Financial Contributions</h2>
+            <p class="financial-subtitle">We believe in complete transparency. Below are all donations received by Varu Network Myanmar.</p>
+            
+            <!-- ===== EXPENSES BUTTON ===== -->
+            <div class="financial-actions">
+                <a href="{% url 'expenses' %}" class="expenses-btn">
+                    <i class="fas fa-chart-pie"></i> View Expenses
+                </a>
+            </div>
+        </div>
+
+        <!-- ===== FINANCIAL SUMMARY CARDS ===== -->
+        <div class="financial-summary">
+            <div class="summary-card">
+                <div class="summary-icon">
+                    <i class="fas fa-hand-holding-usd"></i>
+                </div>
+                <div class="summary-content">
+                    <span class="summary-label">Total Donations</span>
+                    <span class="summary-value">{{ total_donations }} MMK</span>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-icon">
+                    <i class="fas fa-receipt"></i>
+                </div>
+                <div class="summary-content">
+                    <span class="summary-label">Total Expenses</span>
+                    <span class="summary-value">{{ total_expenses }} MMK</span>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-icon">
+                    <i class="fas fa-coins"></i>
+                </div>
+                <div class="summary-content">
+                    <span class="summary-label">Remaining Balance</span>
+                    <span class="summary-value">{{ remaining_balance }} MMK</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== TABLE ===== -->
+        <div class="table-wrapper">
+            {% if donations %}
+            <table class="financial-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Donor Name</th>
+                        <th>Amount (MMK)</th>
+                        <th>Date</th>
+                        <th>Receiver</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for donation in donations %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ donation.donor_name }}</td>
+                        <td>{{ donation.amount_mmk }}</td>
+                        <td>{{ donation.date }}</td>
+                        <td>{{ donation.receiver }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+            <p class="no-records"><i class="fas fa-info-circle"></i> No donation records available.</p>
+            {% endif %}
+        </div>
+
+        <div class="financial-note">
+            <p><i class="fas fa-info-circle"></i> All donations are verified and recorded. For any inquiries, please <a href="{% url 'contactus' %}">contact us</a>.</p>
+        </div>
+        
+        <!-- ===== EXPENSES FOOTER LINK ===== -->
+        <div class="expenses-footer">
+            <a href="{% url 'expenses' %}" class="expenses-footer-link">
+                <i class="fas fa-arrow-right"></i> View detailed expenses breakdown
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

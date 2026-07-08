@@ -1,0 +1,114 @@
+{% extends 'varu/base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'varu/css/expenses.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- ===== EXPENSES TRANSPARENCY TABLE ===== -->
+<section class="expenses-section">
+    <div class="container">
+        <div class="expenses-header">
+            <span class="expenses-tag">Financial Transparency</span>
+            <h2 class="expenses-title">Expenses Breakdown</h2>
+            <p class="expenses-subtitle">Complete transparency on how donations are utilized for our community projects and initiatives.</p>
+            
+            <!-- ===== BACK TO DONATIONS BUTTON ===== -->
+            <div class="expenses-actions">
+                <a href="{% url 'transparency' %}" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to Donations
+                </a>
+            </div>
+        </div>
+
+        <!-- ===== EXPENSES SUMMARY CARDS ===== -->
+        <div class="expenses-summary">
+            <div class="summary-card">
+                <div class="summary-icon">
+                    <i class="fas fa-receipt"></i>
+                </div>
+                <div class="summary-content">
+                    <span class="summary-label">Total Expenses</span>
+                    <span class="summary-value">{{ total_expenses }} MMK</span>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="summary-content">
+                    <span class="summary-label">Projects Funded</span>
+                    <span class="summary-value">{{ projects_funded }}</span>
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="summary-content">
+                    <span class="summary-label">Completed Projects</span>
+                    <span class="summary-value">{{ completed_projects }}</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== TABLE ===== -->
+        <div class="table-wrapper">
+            {% if expenses %}
+            <table class="expenses-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Description</th>
+                        <th>Amount (MMK)</th>
+                        <th>Date</th>
+                        <th>Approved By</th>
+                        <th>Project</th>
+                        <th>Proof</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for expense in expenses %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>
+                            <div class="expense-description">
+                                <span class="expense-title">{{ expense.description }}</span>
+                                <span class="expense-category">{{ expense.project.category }}</span>
+                            </div>
+                        </td>
+                        <td>{{ expense.amount_mmk }}</td>
+                        <td>{{ expense.date }}</td>
+                        <td>
+                            <div class="approved-by">
+                                <i class="fas fa-user-check"></i>
+                                {{ expense.approved_by }}
+                            </div>
+                        </td>
+                        <td>
+                            <span class="project-tag">{{ expense.project.title }}</span>
+                        </td>
+                        <td>
+                            {% if expense.proof %}
+                                <a href="{{ expense.proof }}" class="proof-btn" target="_blank">
+                                    <i class="fas fa-image"></i> View Proof
+                                </a>
+                            {% else %}
+                                <span class="no-proof">No Proof</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+            <p class="no-records"><i class="fas fa-info-circle"></i> No expense records available.</p>
+            {% endif %}
+        </div>
+
+        <div class="expenses-note">
+            <p><i class="fas fa-info-circle"></i> All expenses are verified and approved by the Varu Network Myanmar team. For detailed project proofs, click the "View Proof" button.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
